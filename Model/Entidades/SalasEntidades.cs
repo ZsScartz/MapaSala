@@ -12,6 +12,7 @@ namespace Model.Entidades
         public string Nome { get; set; }
         public int NumeroComputadores { get; set; }
         public bool IsLab { get; set; }
+        public int NumeroCadeira { get; set; }
         public bool Disponível { get; set; }
     }
 }
