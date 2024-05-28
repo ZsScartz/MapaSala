@@ -40,10 +40,10 @@ namespace MapaSala.Formulários
             this.chkIsLab = new System.Windows.Forms.CheckBox();
             this.chkDisponivel = new System.Windows.Forms.CheckBox();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtGridSalas = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.numCadeiras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComputadores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -142,21 +142,21 @@ namespace MapaSala.Formulários
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dtGridSalas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 91);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(765, 347);
-            this.dataGridView1.TabIndex = 16;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dtGridSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridSalas.Location = new System.Drawing.Point(12, 91);
+            this.dtGridSalas.Name = "dtGridSalas";
+            this.dtGridSalas.Size = new System.Drawing.Size(765, 347);
+            this.dtGridSalas.TabIndex = 16;
+            this.dtGridSalas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // frmSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtGridSalas);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.chkDisponivel);
             this.Controls.Add(this.chkIsLab);
@@ -169,10 +169,12 @@ namespace MapaSala.Formulários
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmSalas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSalas";
+            this.Load += new System.EventHandler(this.frmSalas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numCadeiras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComputadores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -190,6 +192,6 @@ namespace MapaSala.Formulários
         private System.Windows.Forms.CheckBox chkIsLab;
         private System.Windows.Forms.CheckBox chkDisponivel;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtGridSalas;
     }
 }

@@ -36,5 +36,10 @@ namespace MapaSala.Formulários
         {
 
         }
+
+        private void frmSalas_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
