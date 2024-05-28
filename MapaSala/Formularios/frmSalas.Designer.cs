@@ -1,5 +1,5 @@
 ﻿
-namespace MapaSala.Formulários
+namespace MapaSala.Formularios
 {
     partial class frmSalas
     {
