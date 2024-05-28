@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model.Entidades;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,13 @@ namespace MapaSala.Formulários
 {
     public partial class frmSalas : Form
     {
+
+        BindingSource dados;
         public frmSalas()
         {
             InitializeComponent();
+            dados = new BindingSource();
+            dtGridSalas.DataSource = dados;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -40,6 +45,19 @@ namespace MapaSala.Formulários
         private void frmSalas_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            SalasEntidades sala = new SalasEntidades();
+            sala.Id = Convert.ToInt32(TxtId.Text);
+            sala.Nome = TxtNomeSala.Text;
+            sala.IsLab = chkIsLab.Checked;
+            sala.NumeroCadeiras = Convert.ToInt32(numCadeiras.Value);
+            sala.NumeroComputadores = Convert.ToInt32(NumComputadores.Value);
+            sala.Disponivel = chkDisponivel.Checked;
+
+            dados.Add(sala);
         }
     }
 }

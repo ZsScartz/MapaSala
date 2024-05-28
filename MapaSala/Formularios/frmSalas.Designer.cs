@@ -119,7 +119,7 @@ namespace MapaSala.Formulários
             this.chkIsLab.Name = "chkIsLab";
             this.chkIsLab.Size = new System.Drawing.Size(85, 17);
             this.chkIsLab.TabIndex = 13;
-            this.chkIsLab.Text = "É laboratoria";
+            this.chkIsLab.Text = "É laboratorio";
             this.chkIsLab.UseVisualStyleBackColor = true;
             // 
             // chkDisponivel
@@ -141,6 +141,7 @@ namespace MapaSala.Formulários
             this.btnSalvar.TabIndex = 15;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // dtGridSalas
             // 

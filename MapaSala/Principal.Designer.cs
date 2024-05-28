@@ -258,7 +258,7 @@ namespace MapaSala
             this.bntDiv.TabIndex = 7;
             this.bntDiv.Text = "Divisão";
             this.bntDiv.UseVisualStyleBackColor = true;
-            this.bntDiv.Click += new System.EventHandler(this.button1_Click_1);
+            this.bntDiv.Click += new System.EventHandler(this.bntDiv_Click_1);
             // 
             // bntNum2
             // 
