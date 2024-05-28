@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MapaSala.Formularios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace MapaSala
 {
@@ -49,7 +51,10 @@ namespace MapaSala
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            int Num1 = Convert.ToInt32(txtNum1.Text);
+            int Num2 = Convert.ToInt32(txtNum2.Text);
+            int sub = Num1 / Num2;
+            MessageBox.Show(sub.ToString());
         }
 
         private void bntCalc2_Click(object sender, EventArgs e)
@@ -63,6 +68,33 @@ namespace MapaSala
             int Num2 = Convert.ToInt32(txtNum2.Text);
             int sub = Num1 - Num2;
             MessageBox.Show(sub.ToString());
+        }
+
+        private void btnAdi_Click(object sender, EventArgs e)
+        {
+            int Num1 = Convert.ToInt32(txtNum1.Text);
+            int Num2 = Convert.ToInt32(txtNum2.Text);
+            int sub = Num1 + Num2;
+            MessageBox.Show(sub.ToString());
+        }
+
+        private void bntNum2_Click(object sender, EventArgs e)
+        {
+            int Num1 = Convert.ToInt32(txtNum1.Text);
+            int Num2 = Convert.ToInt32(txtNum2.Text);
+            int sub = Num1 * Num2;
+            MessageBox.Show(sub.ToString());
+        }
+
+        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmSalas s = new frmSalas();
+            s.ShowDialog();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

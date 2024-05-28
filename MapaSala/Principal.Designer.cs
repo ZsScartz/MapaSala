@@ -91,37 +91,38 @@ namespace MapaSala
             // cadastrosToolStripMenuItem
             // 
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrosToolStripMenuItem.Text = "Salas";
+            this.cadastrosToolStripMenuItem.Click += new System.EventHandler(this.cadastrosToolStripMenuItem_Click);
             // 
             // relatoriosToolStripMenuItem
             // 
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
-            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.relatoriosToolStripMenuItem.Text = "Professores";
             // 
             // disciplinasToolStripMenuItem
             // 
             this.disciplinasToolStripMenuItem.Name = "disciplinasToolStripMenuItem";
-            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.disciplinasToolStripMenuItem.Text = "Disciplinas";
             // 
             // horáriosToolStripMenuItem
             // 
             this.horáriosToolStripMenuItem.Name = "horáriosToolStripMenuItem";
-            this.horáriosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.horáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.horáriosToolStripMenuItem.Text = "Horários";
             // 
             // cursosToolStripMenuItem
             // 
             this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cursosToolStripMenuItem.Text = "Cursos";
             // 
             // diasDaSemanaToolStripMenuItem
             // 
             this.diasDaSemanaToolStripMenuItem.Name = "diasDaSemanaToolStripMenuItem";
-            this.diasDaSemanaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.diasDaSemanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.diasDaSemanaToolStripMenuItem.Text = "Dias da Semana";
             // 
             // sairToolStripMenuItem
@@ -231,18 +232,19 @@ namespace MapaSala
             // 
             // btnAdi
             // 
-            this.btnAdi.Location = new System.Drawing.Point(505, 303);
+            this.btnAdi.Location = new System.Drawing.Point(465, 262);
             this.btnAdi.Name = "btnAdi";
-            this.btnAdi.Size = new System.Drawing.Size(75, 23);
+            this.btnAdi.Size = new System.Drawing.Size(95, 23);
             this.btnAdi.TabIndex = 5;
             this.btnAdi.Text = "Adição";
             this.btnAdi.UseVisualStyleBackColor = true;
+            this.btnAdi.Click += new System.EventHandler(this.btnAdi_Click);
             // 
             // bntSub
             // 
-            this.bntSub.Location = new System.Drawing.Point(609, 303);
+            this.bntSub.Location = new System.Drawing.Point(583, 262);
             this.bntSub.Name = "bntSub";
-            this.bntSub.Size = new System.Drawing.Size(75, 23);
+            this.bntSub.Size = new System.Drawing.Size(95, 23);
             this.bntSub.TabIndex = 6;
             this.bntSub.Text = "Subtração";
             this.bntSub.UseVisualStyleBackColor = true;
@@ -250,9 +252,9 @@ namespace MapaSala
             // 
             // bntDiv
             // 
-            this.bntDiv.Location = new System.Drawing.Point(636, 168);
+            this.bntDiv.Location = new System.Drawing.Point(583, 304);
             this.bntDiv.Name = "bntDiv";
-            this.bntDiv.Size = new System.Drawing.Size(75, 23);
+            this.bntDiv.Size = new System.Drawing.Size(95, 23);
             this.bntDiv.TabIndex = 7;
             this.bntDiv.Text = "Divisão";
             this.bntDiv.UseVisualStyleBackColor = true;
@@ -260,26 +262,28 @@ namespace MapaSala
             // 
             // bntNum2
             // 
-            this.bntNum2.Location = new System.Drawing.Point(635, 213);
+            this.bntNum2.Location = new System.Drawing.Point(465, 304);
             this.bntNum2.Name = "bntNum2";
-            this.bntNum2.Size = new System.Drawing.Size(75, 23);
+            this.bntNum2.Size = new System.Drawing.Size(95, 23);
             this.bntNum2.TabIndex = 8;
             this.bntNum2.Text = "Multiplicação";
             this.bntNum2.UseVisualStyleBackColor = true;
+            this.bntNum2.Click += new System.EventHandler(this.bntNum2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(502, 147);
+            this.label1.Location = new System.Drawing.Point(402, 179);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 13);
             this.label1.TabIndex = 9;
             this.label1.Text = "Insira um número";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(508, 253);
+            this.label2.Location = new System.Drawing.Point(402, 223);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(97, 13);
             this.label2.TabIndex = 10;
