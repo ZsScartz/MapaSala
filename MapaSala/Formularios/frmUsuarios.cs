@@ -22,5 +22,10 @@ namespace MapaSala.Formularios
         {
             UsuariosEntidade entidade = new UsuariosEntidade();
         }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
