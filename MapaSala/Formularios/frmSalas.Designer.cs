@@ -121,6 +121,7 @@ namespace MapaSala.Formularios
             this.chkIsLab.TabIndex = 13;
             this.chkIsLab.Text = "É laboratorio";
             this.chkIsLab.UseVisualStyleBackColor = true;
+            this.chkIsLab.CheckedChanged += new System.EventHandler(this.chkIsLab_CheckedChanged);
             // 
             // chkDisponivel
             // 

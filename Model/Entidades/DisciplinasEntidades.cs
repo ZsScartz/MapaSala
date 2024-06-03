@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Model.Entidades
 {
-       public class UsuariosEntidade
+    class DisciplinasEntidades
     {
-        public int Id { get; set; }
-        public string Login { get; set; }
-        public string Senhas { get; set; }
+        public int id { get; set; }
         public string Nome { get; set; }
-        public bool Ativo { get; set; }
+        public string Sigla { get; set; }
+        public string Ativo { get; set; }
     }
 }

@@ -59,5 +59,10 @@ namespace MapaSala.Formularios
 
             dados.Add(sala);
         }
+
+        private void chkIsLab_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
