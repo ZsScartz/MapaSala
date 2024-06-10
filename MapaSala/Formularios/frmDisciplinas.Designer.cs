@@ -135,6 +135,7 @@ namespace MapaSala.Formularios
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmDisciplinas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDisciplinas";
             this.Load += new System.EventHandler(this.frmDisciplinas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplinas)).EndInit();

@@ -36,7 +36,7 @@ namespace MapaSala.Formularios
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             ProfessoresEntidades professores = new  ProfessoresEntidades();
-            professores.Id = Convert.ToInt32(txtId.Text);
+            professores.Id = Convert.ToInt32(numId.Value);
 
             professores.Nome = txtNome.Text;
             professores.Apelido = txtApelido.Text;

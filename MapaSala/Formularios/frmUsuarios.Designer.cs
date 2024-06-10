@@ -30,7 +30,6 @@ namespace MapaSala.Formularios
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
@@ -40,24 +39,19 @@ namespace MapaSala.Formularios
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dtGridUsuarios = new System.Windows.Forms.DataGridView();
+            this.numId = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridUsuarios)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(39, 53);
+            this.label1.Location = new System.Drawing.Point(29, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(42, 80);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(13, 20);
-            this.txtId.TabIndex = 1;
             // 
             // txtNome
             // 
@@ -139,11 +133,19 @@ namespace MapaSala.Formularios
             this.dtGridUsuarios.TabIndex = 10;
             this.dtGridUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridUsuarios_CellContentClick);
             // 
+            // numId
+            // 
+            this.numId.Location = new System.Drawing.Point(22, 77);
+            this.numId.Name = "numId";
+            this.numId.Size = new System.Drawing.Size(33, 20);
+            this.numId.TabIndex = 11;
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numId);
             this.Controls.Add(this.dtGridUsuarios);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSenha);
@@ -153,12 +155,13 @@ namespace MapaSala.Formularios
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtNome);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Name = "frmUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUsuarios";
             this.Load += new System.EventHandler(this.frmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridUsuarios)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,7 +170,6 @@ namespace MapaSala.Formularios
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox chkAtivo;
@@ -177,5 +179,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dtGridUsuarios;
+        private System.Windows.Forms.NumericUpDown numId;
     }
 }

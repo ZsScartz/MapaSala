@@ -24,7 +24,7 @@ namespace MapaSala.Formularios
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             UsuariosEntidade usuarios = new UsuariosEntidade();
-            usuarios.Id = Convert.ToInt32(txtId.Text);
+            usuarios.Id = Convert.ToInt32(numId.Value);
             usuarios.Nome = txtNome.Text;
             usuarios.Login = txtLogin.Text;
             usuarios.Senha = txtSenha.Text;
