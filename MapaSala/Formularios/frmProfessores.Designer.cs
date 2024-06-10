@@ -36,8 +36,8 @@ namespace MapaSala.Formularios
             this.txtApelido = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtGridProfessores = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridProfessores)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -100,20 +100,21 @@ namespace MapaSala.Formularios
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // dataGridView1
+            // dtGridProfessores
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 132);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 306);
-            this.dataGridView1.TabIndex = 7;
+            this.dtGridProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridProfessores.Location = new System.Drawing.Point(12, 75);
+            this.dtGridProfessores.Name = "dtGridProfessores";
+            this.dtGridProfessores.Size = new System.Drawing.Size(776, 363);
+            this.dtGridProfessores.TabIndex = 7;
+            this.dtGridProfessores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridProfessores_CellContentClick);
             // 
             // frmProfessores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dtGridProfessores);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtApelido);
@@ -124,7 +125,7 @@ namespace MapaSala.Formularios
             this.Name = "frmProfessores";
             this.Text = "frmProfessores";
             this.Load += new System.EventHandler(this.frmProfessores_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridProfessores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,6 +140,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.TextBox txtApelido;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtGridProfessores;
     }
 }

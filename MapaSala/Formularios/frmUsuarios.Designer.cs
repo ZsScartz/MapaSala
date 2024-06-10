@@ -39,6 +39,8 @@ namespace MapaSala.Formularios
             this.label3 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.dtGridUsuarios = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,6 +65,7 @@ namespace MapaSala.Formularios
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(75, 20);
             this.txtNome.TabIndex = 2;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // label2
             // 
@@ -76,7 +79,7 @@ namespace MapaSala.Formularios
             // chkAtivo
             // 
             this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(354, 141);
+            this.chkAtivo.Location = new System.Drawing.Point(394, 80);
             this.chkAtivo.Name = "chkAtivo";
             this.chkAtivo.Size = new System.Drawing.Size(50, 17);
             this.chkAtivo.TabIndex = 4;
@@ -85,7 +88,7 @@ namespace MapaSala.Formularios
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(426, 141);
+            this.btnSalvar.Location = new System.Drawing.Point(466, 80);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 5;
@@ -127,11 +130,21 @@ namespace MapaSala.Formularios
             this.label4.TabIndex = 9;
             this.label4.Text = "Senha";
             // 
+            // dtGridUsuarios
+            // 
+            this.dtGridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridUsuarios.Location = new System.Drawing.Point(12, 109);
+            this.dtGridUsuarios.Name = "dtGridUsuarios";
+            this.dtGridUsuarios.Size = new System.Drawing.Size(776, 329);
+            this.dtGridUsuarios.TabIndex = 10;
+            this.dtGridUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridUsuarios_CellContentClick);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dtGridUsuarios);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label3);
@@ -144,6 +157,8 @@ namespace MapaSala.Formularios
             this.Controls.Add(this.label1);
             this.Name = "frmUsuarios";
             this.Text = "frmUsuarios";
+            this.Load += new System.EventHandler(this.frmUsuarios_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,5 +176,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridView dtGridUsuarios;
     }
 }

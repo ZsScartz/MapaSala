@@ -111,6 +111,7 @@ namespace MapaSala.Formularios
             this.NumComputadores.Name = "NumComputadores";
             this.NumComputadores.Size = new System.Drawing.Size(120, 20);
             this.NumComputadores.TabIndex = 12;
+            this.NumComputadores.ValueChanged += new System.EventHandler(this.NumComputadores_ValueChanged);
             // 
             // chkIsLab
             // 

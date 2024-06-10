@@ -96,5 +96,34 @@ namespace MapaSala
             int sub = Num1 / Num2;
             MessageBox.Show(sub.ToString());
         }
+
+        private void relatoriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProfessores s = new frmProfessores();
+            s.ShowDialog();
+        }
+
+        private void disciplinasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDisciplinas s = new frmDisciplinas();
+            s.ShowDialog();
+        }
+
+        private void horáriosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCursos s = new frmCursos();
+            s.ShowDialog();
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmUsuarios s = new frmUsuarios();
+            s.ShowDialog();
+        }
     }
 }

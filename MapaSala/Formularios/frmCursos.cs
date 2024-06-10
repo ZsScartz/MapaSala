@@ -3,13 +3,18 @@ using System;
 
 using System.Windows.Forms;
 
+
 namespace MapaSala.Formularios
 {
     public partial class frmCursos : Form
     {
+        
+        BindingSource dados;
         public frmCursos()
         {
             InitializeComponent();
+            dados = new BindingSource();
+            dtGridCursos.DataSource = dados;
         }
 
         private void frmCursos_Load(object sender, EventArgs e)
@@ -20,10 +25,21 @@ namespace MapaSala.Formularios
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             CursoEntidades curso = new CursoEntidades();
-            curso.Id = Convert.ToInt32(txtId.Text);
+            curso.Id = Convert.ToInt32(numId.Value);
             curso.Ativo = chkAtivo.Checked;
             curso.Nome = txtNome.Text;
-            
+
+            dados.Add(curso);
+        }
+
+        private void dtGridCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void chkAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

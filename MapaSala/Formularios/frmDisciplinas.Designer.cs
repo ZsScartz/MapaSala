@@ -30,15 +30,16 @@ namespace MapaSala.Formularios
         private void InitializeComponent()
         {
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.txtSigla = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dtGridDisciplinas = new System.Windows.Forms.DataGridView();
+            this.chkAtivo = new System.Windows.Forms.CheckBox();
+            this.numId = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplinas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSalvar
@@ -50,16 +51,6 @@ namespace MapaSala.Formularios
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // chkAtivo
-            // 
-            this.chkAtivo.AutoSize = true;
-            this.chkAtivo.Location = new System.Drawing.Point(324, 88);
-            this.chkAtivo.Name = "chkAtivo";
-            this.chkAtivo.Size = new System.Drawing.Size(50, 17);
-            this.chkAtivo.TabIndex = 18;
-            this.chkAtivo.Text = "Ativo";
-            this.chkAtivo.UseVisualStyleBackColor = true;
             // 
             // txtSigla
             // 
@@ -84,13 +75,6 @@ namespace MapaSala.Formularios
             this.label2.TabIndex = 14;
             this.label2.Text = "Nome";
             // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(22, 88);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(23, 20);
-            this.txtId.TabIndex = 13;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -109,32 +93,52 @@ namespace MapaSala.Formularios
             this.label3.TabIndex = 20;
             this.label3.Text = "Sigla";
             // 
-            // dataGridView1
+            // dtGridDisciplinas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 147);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 291);
-            this.dataGridView1.TabIndex = 21;
+            this.dtGridDisciplinas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridDisciplinas.Location = new System.Drawing.Point(12, 132);
+            this.dtGridDisciplinas.Name = "dtGridDisciplinas";
+            this.dtGridDisciplinas.Size = new System.Drawing.Size(776, 306);
+            this.dtGridDisciplinas.TabIndex = 21;
+            this.dtGridDisciplinas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplinas_CellContentClick);
+            // 
+            // chkAtivo
+            // 
+            this.chkAtivo.AutoSize = true;
+            this.chkAtivo.Location = new System.Drawing.Point(313, 90);
+            this.chkAtivo.Name = "chkAtivo";
+            this.chkAtivo.Size = new System.Drawing.Size(50, 17);
+            this.chkAtivo.TabIndex = 22;
+            this.chkAtivo.Text = "Ativo";
+            this.chkAtivo.UseVisualStyleBackColor = true;
+            this.chkAtivo.CheckedChanged += new System.EventHandler(this.chkAtivo_CheckedChanged_2);
+            // 
+            // numId
+            // 
+            this.numId.Location = new System.Drawing.Point(22, 88);
+            this.numId.Name = "numId";
+            this.numId.Size = new System.Drawing.Size(30, 20);
+            this.numId.TabIndex = 23;
             // 
             // frmDisciplinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.numId);
+            this.Controls.Add(this.chkAtivo);
+            this.Controls.Add(this.dtGridDisciplinas);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtSigla);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Name = "frmDisciplinas";
             this.Text = "frmDisciplinas";
             this.Load += new System.EventHandler(this.frmDisciplinas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplinas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -143,13 +147,13 @@ namespace MapaSala.Formularios
         #endregion
 
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.TextBox txtSigla;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtGridDisciplinas;
+        private System.Windows.Forms.CheckBox chkAtivo;
+        private System.Windows.Forms.NumericUpDown numId;
     }
 }

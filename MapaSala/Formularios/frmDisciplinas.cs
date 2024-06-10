@@ -13,9 +13,14 @@ namespace MapaSala.Formularios
 {
     public partial class frmDisciplinas : Form
     {
+        BindingSource dados;
         public frmDisciplinas()
         {
             InitializeComponent();
+            dados = new BindingSource();
+            dtGridDisciplinas.DataSource = dados;
+
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -61,13 +66,31 @@ namespace MapaSala.Formularios
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             DisciplinasEntidades disciplinas = new DisciplinasEntidades();
-            disciplinas.Id = Convert.ToInt32(txtId.Text);
+            disciplinas.Id = Convert.ToInt32(numId.Value);
             disciplinas.Nome = txtNome.Text;
             disciplinas.Sigla = txtSigla.Text;
             disciplinas.Ativo = chkAtivo.Checked;
 
+            dados.Add(disciplinas);
+          
+        }
 
-            
+        private void chkAtivo_CheckedChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkAtivo_CheckedChanged_2(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtGridDisciplinas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtId_TextChanged_1(object sender, EventArgs e)
         {
 
         }

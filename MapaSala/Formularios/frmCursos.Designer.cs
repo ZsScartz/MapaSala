@@ -30,16 +30,17 @@ namespace MapaSala.Formularios
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtSigla = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtGridCursos = new System.Windows.Forms.DataGridView();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.numId = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridCursos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,13 +51,6 @@ namespace MapaSala.Formularios
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(32, 69);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(23, 20);
-            this.txtId.TabIndex = 1;
             // 
             // txtNome
             // 
@@ -99,6 +93,7 @@ namespace MapaSala.Formularios
             this.chkAtivo.TabIndex = 10;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
+            this.chkAtivo.CheckedChanged += new System.EventHandler(this.chkAtivo_CheckedChanged);
             // 
             // btnSalvar
             // 
@@ -110,32 +105,42 @@ namespace MapaSala.Formularios
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // dataGridView1
+            // dtGridCursos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 121);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(777, 317);
-            this.dataGridView1.TabIndex = 12;
+            this.dtGridCursos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridCursos.Location = new System.Drawing.Point(11, 121);
+            this.dtGridCursos.Name = "dtGridCursos";
+            this.dtGridCursos.Size = new System.Drawing.Size(777, 317);
+            this.dtGridCursos.TabIndex = 12;
+            this.dtGridCursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridCursos_CellContentClick);
+            // 
+            // numId
+            // 
+            this.numId.Location = new System.Drawing.Point(32, 69);
+            this.numId.Name = "numId";
+            this.numId.Size = new System.Drawing.Size(33, 20);
+            this.numId.TabIndex = 13;
             // 
             // frmCursos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.numId);
+            this.Controls.Add(this.dtGridCursos);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSigla);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.label1);
             this.Name = "frmCursos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCursos";
             this.Load += new System.EventHandler(this.frmCursos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridCursos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,14 +149,14 @@ namespace MapaSala.Formularios
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtSigla;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtGridCursos;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.NumericUpDown numId;
     }
 }

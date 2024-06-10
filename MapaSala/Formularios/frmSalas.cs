@@ -57,10 +57,16 @@ namespace MapaSala.Formularios
             sala.NumeroComputadores = Convert.ToInt32(NumComputadores.Value);
             sala.Disponivel = chkDisponivel.Checked;
 
+
             dados.Add(sala);
         }
 
         private void chkIsLab_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NumComputadores_ValueChanged(object sender, EventArgs e)
         {
 
         }

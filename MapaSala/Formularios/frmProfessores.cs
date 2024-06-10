@@ -13,9 +13,14 @@ namespace MapaSala.Formularios
 {
     public partial class frmProfessores : Form
     {
+        BindingSource dados;
         public frmProfessores()
+            
+           
         {
             InitializeComponent();
+            dados = new BindingSource();
+            dtGridProfessores.DataSource = dados;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -32,11 +37,20 @@ namespace MapaSala.Formularios
         {
             ProfessoresEntidades professores = new  ProfessoresEntidades();
             professores.Id = Convert.ToInt32(txtId.Text);
+
             professores.Nome = txtNome.Text;
             professores.Apelido = txtApelido.Text;
+
+            dados.Add(professores);
+
         }
 
         private void frmProfessores_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtGridProfessores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
