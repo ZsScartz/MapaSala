@@ -54,6 +54,32 @@ namespace MapaSala.Formularios
         {
 
         }
+
+        private void limpar()
+        {
+            txtNome.Text = "";
+            txtApelido.Text = "";
+            numId.Value = 0;
+        }
+        private void bntLimpar_Click(object sender, EventArgs e)
+        {
+            limpar();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtApelido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void numId_ValueChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
 
