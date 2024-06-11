@@ -13,7 +13,8 @@ namespace MapaSala.Formularios
 {
     public partial class frmDisciplinas : Form
     {
-        BindingSource dados;
+        DataTable dados;
+        int LinhaSelecionada;
         public frmDisciplinas()
         {
             InitializeComponent();
