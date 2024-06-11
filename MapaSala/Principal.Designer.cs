@@ -37,6 +37,7 @@ namespace MapaSala
             this.horáriosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diasDaSemanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salvarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,16 +50,18 @@ namespace MapaSala
             this.salasLivresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.todosProfessoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnCLiqueAqui = new System.Windows.Forms.Button();
-            this.txtNum2 = new System.Windows.Forms.TextBox();
-            this.txtNum1 = new System.Windows.Forms.TextBox();
             this.btnAdi = new System.Windows.Forms.Button();
             this.bntSub = new System.Windows.Forms.Button();
             this.bntDiv = new System.Windows.Forms.Button();
             this.bntNum2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.numNum1 = new System.Windows.Forms.NumericUpDown();
+            this.numNum2 = new System.Windows.Forms.NumericUpDown();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numNum1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNum2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -93,43 +96,50 @@ namespace MapaSala
             // cadastrosToolStripMenuItem
             // 
             this.cadastrosToolStripMenuItem.Name = "cadastrosToolStripMenuItem";
-            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.cadastrosToolStripMenuItem.Text = "Salas";
             this.cadastrosToolStripMenuItem.Click += new System.EventHandler(this.cadastrosToolStripMenuItem_Click);
             // 
             // relatoriosToolStripMenuItem
             // 
             this.relatoriosToolStripMenuItem.Name = "relatoriosToolStripMenuItem";
-            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.relatoriosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.relatoriosToolStripMenuItem.Text = "Professores";
             this.relatoriosToolStripMenuItem.Click += new System.EventHandler(this.relatoriosToolStripMenuItem_Click);
             // 
             // disciplinasToolStripMenuItem
             // 
             this.disciplinasToolStripMenuItem.Name = "disciplinasToolStripMenuItem";
-            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.disciplinasToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.disciplinasToolStripMenuItem.Text = "Disciplinas";
             this.disciplinasToolStripMenuItem.Click += new System.EventHandler(this.disciplinasToolStripMenuItem_Click);
             // 
             // horáriosToolStripMenuItem
             // 
             this.horáriosToolStripMenuItem.Name = "horáriosToolStripMenuItem";
-            this.horáriosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.horáriosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.horáriosToolStripMenuItem.Text = "Horários";
             this.horáriosToolStripMenuItem.Click += new System.EventHandler(this.horáriosToolStripMenuItem_Click);
             // 
             // cursosToolStripMenuItem
             // 
             this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
-            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.cursosToolStripMenuItem.Text = "Cursos";
             this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
             // 
             // diasDaSemanaToolStripMenuItem
             // 
             this.diasDaSemanaToolStripMenuItem.Name = "diasDaSemanaToolStripMenuItem";
-            this.diasDaSemanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.diasDaSemanaToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.diasDaSemanaToolStripMenuItem.Text = "Dias da Semana";
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
@@ -221,21 +231,6 @@ namespace MapaSala
             this.btnCLiqueAqui.Click += new System.EventHandler(this.button1_Click);
             this.btnCLiqueAqui.MouseEnter += new System.EventHandler(this.btnCLiqueAqui_MouseEnter);
             // 
-            // txtNum2
-            // 
-            this.txtNum2.Location = new System.Drawing.Point(505, 217);
-            this.txtNum2.Name = "txtNum2";
-            this.txtNum2.Size = new System.Drawing.Size(100, 20);
-            this.txtNum2.TabIndex = 3;
-            this.txtNum2.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // txtNum1
-            // 
-            this.txtNum1.Location = new System.Drawing.Point(505, 172);
-            this.txtNum1.Name = "txtNum1";
-            this.txtNum1.Size = new System.Drawing.Size(100, 20);
-            this.txtNum1.TabIndex = 4;
-            // 
             // btnAdi
             // 
             this.btnAdi.Location = new System.Drawing.Point(465, 262);
@@ -295,12 +290,30 @@ namespace MapaSala
             this.label2.TabIndex = 10;
             this.label2.Text = "Insira outro número";
             // 
-            // usuariosToolStripMenuItem
+            // btnLimpar
             // 
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            this.btnLimpar.Location = new System.Drawing.Point(644, 198);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btnLimpar.TabIndex = 11;
+            this.btnLimpar.Text = "Limpar";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // numNum1
+            // 
+            this.numNum1.Location = new System.Drawing.Point(505, 172);
+            this.numNum1.Name = "numNum1";
+            this.numNum1.Size = new System.Drawing.Size(120, 20);
+            this.numNum1.TabIndex = 12;
+            this.numNum1.ValueChanged += new System.EventHandler(this.numNum1_ValueChanged);
+            // 
+            // numNum2
+            // 
+            this.numNum2.Location = new System.Drawing.Point(504, 221);
+            this.numNum2.Name = "numNum2";
+            this.numNum2.Size = new System.Drawing.Size(120, 20);
+            this.numNum2.TabIndex = 13;
             // 
             // Principal
             // 
@@ -308,14 +321,15 @@ namespace MapaSala
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::MapaSala.Properties.Resources._1149234;
             this.ClientSize = new System.Drawing.Size(1073, 544);
+            this.Controls.Add(this.numNum2);
+            this.Controls.Add(this.numNum1);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.bntNum2);
             this.Controls.Add(this.bntDiv);
             this.Controls.Add(this.bntSub);
             this.Controls.Add(this.btnAdi);
-            this.Controls.Add(this.txtNum1);
-            this.Controls.Add(this.txtNum2);
             this.Controls.Add(this.btnCLiqueAqui);
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -327,6 +341,8 @@ namespace MapaSala
             this.Load += new System.EventHandler(this.Principal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numNum1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numNum2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -354,8 +370,6 @@ namespace MapaSala
         private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem diasDaSemanaToolStripMenuItem;
         private System.Windows.Forms.Button btnCLiqueAqui;
-        private System.Windows.Forms.TextBox txtNum2;
-        private System.Windows.Forms.TextBox txtNum1;
         private System.Windows.Forms.Button btnAdi;
         private System.Windows.Forms.Button bntSub;
         private System.Windows.Forms.Button bntDiv;
@@ -363,5 +377,8 @@ namespace MapaSala
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.NumericUpDown numNum1;
+        private System.Windows.Forms.NumericUpDown numNum2;
     }
 }

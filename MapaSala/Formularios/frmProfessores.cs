@@ -22,7 +22,12 @@ namespace MapaSala.Formularios
             dados = new BindingSource();
             dtGridProfessores.DataSource = dados;
         }
-
+        private void limparCampos()
+        {
+            txtNome.Text = "";
+            txtApelido.Text = "";
+            numId.Value = 0;
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -43,6 +48,7 @@ namespace MapaSala.Formularios
 
             dados.Add(professores);
 
+            limparCampos();
         }
 
         private void frmProfessores_Load(object sender, EventArgs e)
@@ -54,16 +60,9 @@ namespace MapaSala.Formularios
         {
 
         }
-
-        private void limpar()
-        {
-            txtNome.Text = "";
-            txtApelido.Text = "";
-            numId.Value = 0;
-        }
         private void bntLimpar_Click(object sender, EventArgs e)
         {
-            limpar();
+            limparCampos();
         }
 
         private void txtNome_TextChanged(object sender, EventArgs e)

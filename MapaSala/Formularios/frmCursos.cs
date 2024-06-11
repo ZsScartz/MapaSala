@@ -16,7 +16,13 @@ namespace MapaSala.Formularios
             dados = new BindingSource();
             dtGridCursos.DataSource = dados;
         }
-
+        private void LimparCampos()
+        {
+            txtNome.Text = "";
+            numId.Value = 0;
+            txtSigla.Text = "";
+            chkAtivo.Checked = false;
+        }
         private void frmCursos_Load(object sender, EventArgs e)
         {
 
@@ -30,6 +36,8 @@ namespace MapaSala.Formularios
             curso.Nome = txtNome.Text;
 
             dados.Add(curso);
+
+            LimparCampos();
         }
 
         private void dtGridCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -41,5 +49,11 @@ namespace MapaSala.Formularios
         {
 
         }
+
+        private void bntLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
+        
     }
 }

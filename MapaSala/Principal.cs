@@ -56,24 +56,24 @@ namespace MapaSala
 
         private void bntSub_Click(object sender, EventArgs e)
         {
-            int Num1 = Convert.ToInt32(txtNum1.Text);
-            int Num2 = Convert.ToInt32(txtNum2.Text);
+            int Num1 = Convert.ToInt32(numNum1.Value);
+            int Num2 = Convert.ToInt32(numNum2.Value);
             int sub = Num1 - Num2;
             MessageBox.Show(sub.ToString());
         }
 
         private void btnAdi_Click(object sender, EventArgs e)
         {
-            int Num1 = Convert.ToInt32(txtNum1.Text);
-            int Num2 = Convert.ToInt32(txtNum2.Text);
+            int Num1 = Convert.ToInt32(numNum1.Value);
+            int Num2 = Convert.ToInt32(numNum2.Value);
             int sub = Num1 + Num2;
             MessageBox.Show(sub.ToString());
         }
 
         private void bntNum2_Click(object sender, EventArgs e)
         {
-            int Num1 = Convert.ToInt32(txtNum1.Text);
-            int Num2 = Convert.ToInt32(txtNum2.Text);
+            int Num1 = Convert.ToInt32(numNum1.Value);
+            int Num2 = Convert.ToInt32(numNum2.Value);
             int sub = Num1 * Num2;
             MessageBox.Show(sub.ToString());
         }
@@ -91,8 +91,8 @@ namespace MapaSala
 
         private void bntDiv_Click_1(object sender, EventArgs e)
         {
-            int Num1 = Convert.ToInt32(txtNum1.Text);
-            int Num2 = Convert.ToInt32(txtNum2.Text);
+            int Num1 = Convert.ToInt32(numNum1.Value);
+            int Num2 = Convert.ToInt32(numNum2.Value);
             int sub = Num1 / Num2;
             MessageBox.Show(sub.ToString());
         }
@@ -124,6 +124,21 @@ namespace MapaSala
         {
             frmUsuarios s = new frmUsuarios();
             s.ShowDialog();
+        }
+        private void limpar()
+        {
+            numNum1.Value = 0;
+            numNum2.Value = 0;
+
+        }
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            limpar();
+        }
+
+        private void numNum1_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
