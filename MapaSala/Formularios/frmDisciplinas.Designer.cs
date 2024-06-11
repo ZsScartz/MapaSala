@@ -39,6 +39,7 @@ namespace MapaSala.Formularios
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.numId = new System.Windows.Forms.NumericUpDown();
             this.bntLimpar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplinas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             this.SuspendLayout();
@@ -124,7 +125,7 @@ namespace MapaSala.Formularios
             // 
             // bntLimpar
             // 
-            this.bntLimpar.Location = new System.Drawing.Point(461, 84);
+            this.bntLimpar.Location = new System.Drawing.Point(461, 86);
             this.bntLimpar.Name = "bntLimpar";
             this.bntLimpar.Size = new System.Drawing.Size(75, 23);
             this.bntLimpar.TabIndex = 24;
@@ -132,11 +133,22 @@ namespace MapaSala.Formularios
             this.bntLimpar.UseVisualStyleBackColor = true;
             this.bntLimpar.Click += new System.EventHandler(this.bntLimpar_Click);
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(542, 86);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 25;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // frmDisciplinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.numId);
             this.Controls.Add(this.chkAtivo);
@@ -170,5 +182,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.NumericUpDown numId;
         private System.Windows.Forms.Button bntLimpar;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

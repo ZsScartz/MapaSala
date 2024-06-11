@@ -107,5 +107,10 @@ namespace MapaSala.Formularios
         {
             LimparCampos();
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            dtGridDisciplinas.Rows.RemoveAt(LinhaSelecionada);
+        }
     }
 }
