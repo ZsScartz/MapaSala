@@ -38,6 +38,7 @@ namespace MapaSala.Formularios
             this.dtGridDisciplinas = new System.Windows.Forms.DataGridView();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.numId = new System.Windows.Forms.NumericUpDown();
+            this.bntLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplinas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             this.SuspendLayout();
@@ -120,11 +121,22 @@ namespace MapaSala.Formularios
             this.numId.Size = new System.Drawing.Size(30, 20);
             this.numId.TabIndex = 23;
             // 
+            // bntLimpar
+            // 
+            this.bntLimpar.Location = new System.Drawing.Point(461, 84);
+            this.bntLimpar.Name = "bntLimpar";
+            this.bntLimpar.Size = new System.Drawing.Size(75, 23);
+            this.bntLimpar.TabIndex = 24;
+            this.bntLimpar.Text = "Limpar";
+            this.bntLimpar.UseVisualStyleBackColor = true;
+            this.bntLimpar.Click += new System.EventHandler(this.bntLimpar_Click);
+            // 
             // frmDisciplinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.numId);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.dtGridDisciplinas);
@@ -156,5 +168,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.DataGridView dtGridDisciplinas;
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.NumericUpDown numId;
+        private System.Windows.Forms.Button bntLimpar;
     }
 }

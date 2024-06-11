@@ -70,5 +70,10 @@ namespace MapaSala.Formularios
         {
 
         }
+
+        private void numId_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

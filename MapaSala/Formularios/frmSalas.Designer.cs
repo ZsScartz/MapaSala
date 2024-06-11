@@ -32,7 +32,6 @@ namespace MapaSala.Formularios
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.TxtId = new System.Windows.Forms.TextBox();
             this.TxtNomeSala = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.numCadeiras = new System.Windows.Forms.NumericUpDown();
@@ -41,9 +40,12 @@ namespace MapaSala.Formularios
             this.chkDisponivel = new System.Windows.Forms.CheckBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.dtGridSalas = new System.Windows.Forms.DataGridView();
+            this.bntLimpar = new System.Windows.Forms.Button();
+            this.numId = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.numCadeiras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComputadores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -73,13 +75,6 @@ namespace MapaSala.Formularios
             this.label3.Size = new System.Drawing.Size(73, 13);
             this.label3.TabIndex = 5;
             this.label3.Text = "N de cadeiras";
-            // 
-            // TxtId
-            // 
-            this.TxtId.Location = new System.Drawing.Point(21, 46);
-            this.TxtId.Name = "TxtId";
-            this.TxtId.Size = new System.Drawing.Size(28, 20);
-            this.TxtId.TabIndex = 6;
             // 
             // TxtNomeSala
             // 
@@ -154,11 +149,30 @@ namespace MapaSala.Formularios
             this.dtGridSalas.TabIndex = 16;
             this.dtGridSalas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
+            // bntLimpar
+            // 
+            this.bntLimpar.Location = new System.Drawing.Point(713, 44);
+            this.bntLimpar.Name = "bntLimpar";
+            this.bntLimpar.Size = new System.Drawing.Size(75, 23);
+            this.bntLimpar.TabIndex = 25;
+            this.bntLimpar.Text = "Limpar";
+            this.bntLimpar.UseVisualStyleBackColor = true;
+            // 
+            // numId
+            // 
+            this.numId.Location = new System.Drawing.Point(21, 43);
+            this.numId.Name = "numId";
+            this.numId.Size = new System.Drawing.Size(30, 20);
+            this.numId.TabIndex = 26;
+            this.numId.ValueChanged += new System.EventHandler(this.numId_ValueChanged);
+            // 
             // frmSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.numId);
+            this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.dtGridSalas);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.chkDisponivel);
@@ -167,7 +181,6 @@ namespace MapaSala.Formularios
             this.Controls.Add(this.numCadeiras);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.TxtNomeSala);
-            this.Controls.Add(this.TxtId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -178,6 +191,7 @@ namespace MapaSala.Formularios
             ((System.ComponentModel.ISupportInitialize)(this.numCadeiras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComputadores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numId)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -187,7 +201,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox TxtId;
         private System.Windows.Forms.TextBox TxtNomeSala;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.NumericUpDown numCadeiras;
@@ -196,5 +209,7 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.CheckBox chkDisponivel;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.DataGridView dtGridSalas;
+        private System.Windows.Forms.Button bntLimpar;
+        private System.Windows.Forms.NumericUpDown numId;
     }
 }

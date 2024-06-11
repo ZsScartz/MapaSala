@@ -22,7 +22,13 @@ namespace MapaSala.Formularios
 
 
         }
-
+        private void LimparCampos()
+        {
+            numId.Value = 0;
+            txtSigla.Text = "";
+            txtNome.Text = "";
+            chkAtivo.Checked = false;
+        }
         private void label3_Click(object sender, EventArgs e)
         {
 
@@ -72,6 +78,8 @@ namespace MapaSala.Formularios
             disciplinas.Ativo = chkAtivo.Checked;
 
             dados.Add(disciplinas);
+
+            LimparCampos();
           
         }
 
@@ -93,6 +101,11 @@ namespace MapaSala.Formularios
         private void txtId_TextChanged_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void bntLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
         }
     }
 }
