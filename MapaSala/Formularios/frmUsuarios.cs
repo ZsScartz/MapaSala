@@ -20,6 +20,14 @@ namespace MapaSala.Formularios
             dados = new BindingSource();
             dtGridUsuarios.DataSource = dados;
         }
+        private void LimparDados()
+        {
+            txtLogin.Text = "";
+            txtNome.Text = "";
+            txtSenha.Text = "";
+            chkAtivo.Checked = false;
+            numId.Value = 0;
+        }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -31,6 +39,8 @@ namespace MapaSala.Formularios
             usuarios.Ativo = chkAtivo.Checked;
 
             dados.Add(usuarios);
+
+            LimparDados();
 
         }
 
@@ -52,6 +62,11 @@ namespace MapaSala.Formularios
         private void dtGridUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void bntLimpar_Click(object sender, EventArgs e)
+        {
+            LimparDados();
         }
     }
 }

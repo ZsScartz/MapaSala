@@ -21,6 +21,15 @@ namespace MapaSala.Formularios
             dados = new BindingSource();
             dtGridSalas.DataSource = dados;
         }
+        private void LimparCampos()
+        {
+            numId.Value = 0;
+            TxtNomeSala.Text = "";
+            numCadeiras.Value = 0;
+            NumComputadores.Value = 0;
+            chkDisponivel.Checked = false;
+            chkIsLab.Checked = false;
+        }
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -50,15 +59,16 @@ namespace MapaSala.Formularios
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             SalasEntidades sala = new SalasEntidades();
-            sala.Id = Convert.ToInt32(TxtId.Text);
+            sala.Id = Convert.ToInt32(numId.Value);
             sala.Nome = TxtNomeSala.Text;
             sala.IsLab = chkIsLab.Checked;
             sala.NumeroCadeiras = Convert.ToInt32(numCadeiras.Value);
             sala.NumeroComputadores = Convert.ToInt32(NumComputadores.Value);
             sala.Disponivel = chkDisponivel.Checked;
 
-
             dados.Add(sala);
+
+            LimparCampos();
         }
 
         private void chkIsLab_CheckedChanged(object sender, EventArgs e)

@@ -40,6 +40,7 @@ namespace MapaSala.Formularios
             this.label4 = new System.Windows.Forms.Label();
             this.dtGridUsuarios = new System.Windows.Forms.DataGridView();
             this.numId = new System.Windows.Forms.NumericUpDown();
+            this.bntLimpar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridUsuarios)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             this.SuspendLayout();
@@ -126,6 +127,7 @@ namespace MapaSala.Formularios
             // 
             // dtGridUsuarios
             // 
+            this.dtGridUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtGridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridUsuarios.Location = new System.Drawing.Point(12, 109);
             this.dtGridUsuarios.Name = "dtGridUsuarios";
@@ -135,16 +137,27 @@ namespace MapaSala.Formularios
             // 
             // numId
             // 
-            this.numId.Location = new System.Drawing.Point(22, 77);
+            this.numId.Location = new System.Drawing.Point(22, 79);
             this.numId.Name = "numId";
             this.numId.Size = new System.Drawing.Size(33, 20);
             this.numId.TabIndex = 11;
+            // 
+            // bntLimpar
+            // 
+            this.bntLimpar.Location = new System.Drawing.Point(556, 80);
+            this.bntLimpar.Name = "bntLimpar";
+            this.bntLimpar.Size = new System.Drawing.Size(75, 23);
+            this.bntLimpar.TabIndex = 12;
+            this.bntLimpar.Text = "Limpar";
+            this.bntLimpar.UseVisualStyleBackColor = true;
+            this.bntLimpar.Click += new System.EventHandler(this.bntLimpar_Click);
             // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.numId);
             this.Controls.Add(this.dtGridUsuarios);
             this.Controls.Add(this.label4);
@@ -180,5 +193,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridView dtGridUsuarios;
         private System.Windows.Forms.NumericUpDown numId;
+        private System.Windows.Forms.Button bntLimpar;
     }
 }
