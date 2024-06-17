@@ -40,6 +40,7 @@ namespace MapaSala.Formularios
             this.numId = new System.Windows.Forms.NumericUpDown();
             this.bntLimpar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplinas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             this.SuspendLayout();
@@ -103,7 +104,7 @@ namespace MapaSala.Formularios
             this.dtGridDisciplinas.Name = "dtGridDisciplinas";
             this.dtGridDisciplinas.Size = new System.Drawing.Size(776, 306);
             this.dtGridDisciplinas.TabIndex = 21;
-            this.dtGridDisciplinas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplinas_CellContentClick);
+            this.dtGridDisciplinas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplinas_CellContentClick_1);
             // 
             // chkAtivo
             // 
@@ -143,11 +144,22 @@ namespace MapaSala.Formularios
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(623, 86);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 26;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // frmDisciplinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.numId);
@@ -183,5 +195,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.NumericUpDown numId;
         private System.Windows.Forms.Button bntLimpar;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

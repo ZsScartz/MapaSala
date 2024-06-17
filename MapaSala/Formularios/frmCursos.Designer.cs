@@ -114,7 +114,7 @@ namespace MapaSala.Formularios
             this.dtGridCursos.Name = "dtGridCursos";
             this.dtGridCursos.Size = new System.Drawing.Size(777, 317);
             this.dtGridCursos.TabIndex = 12;
-            this.dtGridCursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridCursos_CellContentClick);
+            
             // 
             // numId
             // 

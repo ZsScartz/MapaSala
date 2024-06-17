@@ -104,11 +104,6 @@ namespace MapaSala.Formularios
 
         }
 
-        private void dtGridDisciplinas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void txtId_TextChanged_1(object sender, EventArgs e)
         {
 
@@ -122,6 +117,33 @@ namespace MapaSala.Formularios
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             dtGridDisciplinas.Rows.RemoveAt(LinhaSelecionada);
+        }
+
+        private void dtGridDisciplinas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LinhaSelecionada = e.RowIndex;
+            txtNome.Text = dtGridDisciplinas.Rows[LinhaSelecionada].Cells[1].Value.ToString();
+            txtSigla.Text = dtGridDisciplinas.Rows[LinhaSelecionada].Cells[2].Value.ToString();
+            numId.Value = Convert.ToInt32(dtGridDisciplinas.Rows[LinhaSelecionada].Cells[0].Value);
+        }
+
+        private void dtGridDisciplinas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtGridDisciplinas_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow editar = dtGridDisciplinas.Rows[LinhaSelecionada];
+            editar.Cells[0].Value = numId.Value;
+            editar.Cells[1].Value = txtNome.Text;
+            editar.Cells[2].Value = txtSigla.Text;
+
         }
     }
 }
