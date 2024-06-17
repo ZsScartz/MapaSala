@@ -15,12 +15,22 @@ namespace MapaSala.Formularios
     {
         DataTable dados;
         int LinhaSelecionada;
+
         public frmDisciplinas()
         {
             InitializeComponent();
-            dados = new BindingSource();
+            dados = new DataTable();
+            
+            foreach (var atributos in typeof(DisciplinasEntidades).GetProperties())
+            {
+                dados.Columns.Add(atributos.Name);
+            }
             dtGridDisciplinas.DataSource = dados;
+            dados.Rows.Add(1, "Matemática", "MAT");
+            dados.Rows.Add(2, "Português", "PORT");
+            dados.Rows.Add(3, "Física", "FIS");
 
+            dtGridDisciplinas.DataSource = dados;
 
         }
         private void LimparCampos()
@@ -78,7 +88,7 @@ namespace MapaSala.Formularios
             disciplinas.Sigla = txtSigla.Text;
             disciplinas.Ativo = chkAtivo.Checked;
 
-            dados.Add(disciplinas);
+            dados.Rows.Add( disciplinas.Linha() );
 
             LimparCampos();
           
