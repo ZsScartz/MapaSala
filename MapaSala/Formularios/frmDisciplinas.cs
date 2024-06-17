@@ -25,10 +25,10 @@ namespace MapaSala.Formularios
             {
                 dados.Columns.Add(atributos.Name);
             }
-            dtGridDisciplinas.DataSource = dados;
-            dados.Rows.Add(1, "Matemática", "MAT");
-            dados.Rows.Add(2, "Português", "PORT");
-            dados.Rows.Add(3, "Física", "FIS");
+           
+            dados.Rows.Add(1, "Matemática", "MAT",true);
+            dados.Rows.Add(2, "Português", "PORT", true);
+            dados.Rows.Add(3, "Física", "FIS", false);
 
             dtGridDisciplinas.DataSource = dados;
 
@@ -119,23 +119,9 @@ namespace MapaSala.Formularios
             dtGridDisciplinas.Rows.RemoveAt(LinhaSelecionada);
         }
 
-        private void dtGridDisciplinas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            LinhaSelecionada = e.RowIndex;
-            txtNome.Text = dtGridDisciplinas.Rows[LinhaSelecionada].Cells[1].Value.ToString();
-            txtSigla.Text = dtGridDisciplinas.Rows[LinhaSelecionada].Cells[2].Value.ToString();
-            numId.Value = Convert.ToInt32(dtGridDisciplinas.Rows[LinhaSelecionada].Cells[0].Value);
-        }
+      
 
-        private void dtGridDisciplinas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dtGridDisciplinas_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+      
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
@@ -144,6 +130,14 @@ namespace MapaSala.Formularios
             editar.Cells[1].Value = txtNome.Text;
             editar.Cells[2].Value = txtSigla.Text;
 
+        }
+
+        private void dtGridDisciplinas_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+            LinhaSelecionada = e.RowIndex;
+            txtNome.Text = dtGridDisciplinas.Rows[LinhaSelecionada].Cells[1].Value.ToString();
+            txtSigla.Text = dtGridDisciplinas.Rows[LinhaSelecionada].Cells[2].Value.ToString();
+            numId.Value = Convert.ToInt32(dtGridDisciplinas.Rows[LinhaSelecionada].Cells[0].Value);
         }
     }
 }
