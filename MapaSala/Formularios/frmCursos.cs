@@ -17,6 +17,7 @@ namespace MapaSala.Formularios
             {
                 dados.Columns.Add(atributos.Name);
             }
+            dtGridCursos.DataSource = dados;
         }
         private void LimparCampos()
         {
@@ -34,8 +35,9 @@ namespace MapaSala.Formularios
         {
             CursoEntidades curso = new CursoEntidades();
             curso.Id = Convert.ToInt32(numId.Value);
-            curso.Ativo = chkAtivo.Checked;
             curso.Nome = txtNome.Text;
+            curso.Sigla = txtSigla.Text;
+            curso.Ativo = chkAtivo.Checked;
 
             dados.Rows.Add(curso.Linha());
 
@@ -54,9 +56,24 @@ namespace MapaSala.Formularios
         private void dtGridCursos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             LinhaSelecionada = e.RowIndex;
+            numId.Value = Convert.ToInt32(dtGridCursos.Rows[LinhaSelecionada].Cells[0].Value);
             txtNome.Text = dtGridCursos.Rows[LinhaSelecionada].Cells[1].Value.ToString();
-            txtSigla.Text = dtGridDisciplinas.Rows[LinhaSelecionada].Cells[2].Value.ToString();
-            numId.Value = Convert.ToInt32(dtGridDisciplinas.Rows[LinhaSelecionada].Cells[0].Value);
+            txtSigla.Text = dtGridCursos.Rows[LinhaSelecionada].Cells[2].Value.ToString();
+            chkAtivo.Checked = Convert.ToBoolean(dtGridCursos.Rows[LinhaSelecionada].Cells[3].Value);
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            dtGridCursos.Rows.RemoveAt(LinhaSelecionada);
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow editar = dtGridCursos.Rows[LinhaSelecionada];
+            editar.Cells[0].Value = numId.Value;
+            editar.Cells[1].Value = txtNome.Text;
+            editar.Cells[2].Value = txtSigla.Text;
+            editar.Cells[3].Value = chkAtivo.Checked;
         }
     }
 }

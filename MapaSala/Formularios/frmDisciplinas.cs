@@ -118,11 +118,6 @@ namespace MapaSala.Formularios
         {
             dtGridDisciplinas.Rows.RemoveAt(LinhaSelecionada);
         }
-
-      
-
-      
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             DataGridViewRow editar = dtGridDisciplinas.Rows[LinhaSelecionada];
@@ -131,8 +126,6 @@ namespace MapaSala.Formularios
             editar.Cells[2].Value = txtSigla.Text;
 
         }
-
-
 
         private void dtGridDisciplinas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
