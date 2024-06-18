@@ -14,11 +14,16 @@ namespace MapaSala.Formularios
     public partial class frmSalas : Form
     {
 
-        BindingSource dados;
+        DataTable dados;
+        int LinhaSelecionada;
         public frmSalas()
         {
             InitializeComponent();
-            dados = new BindingSource();
+            dados = new DataTable();
+            foreach (var atributos in typeof(SalasEntidades).GetProperties())
+            {
+                dados.Columns.Add(atributos.Name);
+            }
             dtGridSalas.DataSource = dados;
         }
         private void LimparCampos()
@@ -31,25 +36,6 @@ namespace MapaSala.Formularios
             chkIsLab.Checked = false;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmSalas_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -57,36 +43,44 @@ namespace MapaSala.Formularios
             sala.Id = Convert.ToInt32(numId.Value);
             sala.Nome = TxtNomeSala.Text;
             sala.IsLab = chkIsLab.Checked;
-            sala.NumeroCadeiras = Convert.ToInt32(numCadeiras.Value);
-            sala.NumeroComputadores = Convert.ToInt32(NumComputadores.Value);
+            sala.NumCadeiras = Convert.ToInt32(numCadeiras.Value);
+            sala.NumComputadores = Convert.ToInt32(NumComputadores.Value);
             sala.Disponivel = chkDisponivel.Checked;
 
-            dados.Add(sala);
+            dados.Rows.Add(sala.Linha());
 
             LimparCampos();
         }
 
-        private void chkIsLab_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NumComputadores_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void numId_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void dtGridSalas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             LinhaSelecionada = e.RowIndex;
-            txtNome.Text = dtGridProfessores.Rows[LinhaSelecionada].Cells[1].Value.ToString();
-            txtApelido.Text = dtGridProfessores.Rows[LinhaSelecionada].Cells[2].Value.ToString();
-            numId.Value = Convert.ToInt32(dtGridProfessores.Rows[LinhaSelecionada].Cells[0].Value);
+            numId.Value = Convert.ToInt32(dtGridSalas.Rows[LinhaSelecionada].Cells[0].Value);
+            TxtNomeSala.Text = dtGridSalas.Rows[LinhaSelecionada].Cells[1].Value.ToString();
+            NumComputadores.Value = Convert.ToInt32(dtGridSalas.Rows[LinhaSelecionada].Cells[2].Value);
+            numCadeiras.Value = Convert.ToInt32(dtGridSalas.Rows[LinhaSelecionada].Cells[3].Value);
+            chkDisponivel.Checked = Convert.ToBoolean(dtGridSalas.Rows[LinhaSelecionada].Cells[4].Value);
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow editar = dtGridSalas.Rows[LinhaSelecionada];
+            editar.Cells[0].Value = numId.Value;
+            editar.Cells[1].Value = TxtNomeSala.Text;
+            editar.Cells[2].Value = NumComputadores.Value;
+            editar.Cells[3].Value = numCadeiras.Value;
+            editar.Cells[4].Value = chkDisponivel.Checked;
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            dtGridSalas.Rows.RemoveAt(LinhaSelecionada);
+        }
+
+        private void chkDisponivel_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

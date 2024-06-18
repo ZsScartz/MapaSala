@@ -42,6 +42,8 @@ namespace MapaSala.Formularios
             this.dtGridSalas = new System.Windows.Forms.DataGridView();
             this.bntLimpar = new System.Windows.Forms.Button();
             this.numId = new System.Windows.Forms.NumericUpDown();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numCadeiras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComputadores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).BeginInit();
@@ -56,7 +58,6 @@ namespace MapaSala.Formularios
             this.label1.Size = new System.Drawing.Size(72, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "Nome da sala";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -82,7 +83,6 @@ namespace MapaSala.Formularios
             this.TxtNomeSala.Name = "TxtNomeSala";
             this.TxtNomeSala.Size = new System.Drawing.Size(100, 20);
             this.TxtNomeSala.TabIndex = 7;
-            this.TxtNomeSala.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label4
             // 
@@ -106,7 +106,6 @@ namespace MapaSala.Formularios
             this.NumComputadores.Name = "NumComputadores";
             this.NumComputadores.Size = new System.Drawing.Size(120, 20);
             this.NumComputadores.TabIndex = 12;
-            this.NumComputadores.ValueChanged += new System.EventHandler(this.NumComputadores_ValueChanged);
             // 
             // chkIsLab
             // 
@@ -117,7 +116,6 @@ namespace MapaSala.Formularios
             this.chkIsLab.TabIndex = 13;
             this.chkIsLab.Text = "É laboratorio";
             this.chkIsLab.UseVisualStyleBackColor = true;
-            this.chkIsLab.CheckedChanged += new System.EventHandler(this.chkIsLab_CheckedChanged);
             // 
             // chkDisponivel
             // 
@@ -128,7 +126,7 @@ namespace MapaSala.Formularios
             this.chkDisponivel.TabIndex = 14;
             this.chkDisponivel.Text = "Disponível";
             this.chkDisponivel.UseVisualStyleBackColor = true;
-            this.chkDisponivel.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.chkDisponivel.CheckedChanged += new System.EventHandler(this.chkDisponivel_CheckedChanged);
             // 
             // btnSalvar
             // 
@@ -146,7 +144,7 @@ namespace MapaSala.Formularios
             this.dtGridSalas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridSalas.Location = new System.Drawing.Point(3, 91);
             this.dtGridSalas.Name = "dtGridSalas";
-            this.dtGridSalas.Size = new System.Drawing.Size(765, 347);
+            this.dtGridSalas.Size = new System.Drawing.Size(866, 347);
             this.dtGridSalas.TabIndex = 16;
             this.dtGridSalas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridSalas_CellClick);
             // 
@@ -165,13 +163,34 @@ namespace MapaSala.Formularios
             this.numId.Name = "numId";
             this.numId.Size = new System.Drawing.Size(30, 20);
             this.numId.TabIndex = 26;
-            this.numId.ValueChanged += new System.EventHandler(this.numId_ValueChanged);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(794, 44);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(75, 23);
+            this.btnEditar.TabIndex = 27;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(875, 44);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 28;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // frmSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(971, 450);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.numId);
             this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.dtGridSalas);
@@ -188,7 +207,6 @@ namespace MapaSala.Formularios
             this.Name = "frmSalas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmSalas";
-            this.Load += new System.EventHandler(this.frmSalas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numCadeiras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumComputadores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridSalas)).EndInit();
@@ -212,5 +230,7 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.DataGridView dtGridSalas;
         private System.Windows.Forms.Button bntLimpar;
         private System.Windows.Forms.NumericUpDown numId;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }

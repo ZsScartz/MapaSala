@@ -8,13 +8,16 @@ namespace MapaSala.Formularios
 {
     public partial class frmCursos : Form
     {
-        
-        BindingSource dados;
+
+        DataTable dados;
+        int LinhaSelecionada;
         public frmCursos()
         {
-            InitializeComponent();
-            dados = new BindingSource();
-            dtGridCursos.DataSource = dados;
+            dados = new DataTable();
+            foreach (var atributos in typeof(Entidades).GetProperties())
+            {
+                dados.Columns.Add(atributos.Name);
+            }
         }
         private void LimparCampos()
         {
@@ -54,6 +57,10 @@ namespace MapaSala.Formularios
         {
             LimparCampos();
         }
-        
+
+        private void dtGridCursos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

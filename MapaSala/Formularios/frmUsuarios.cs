@@ -13,14 +13,18 @@ namespace MapaSala.Formularios
 {
     public partial class frmUsuarios : Form
     {
-        BindingSource dados;
+        DataTable dados;
+        int LinhaSelecionada;
         public frmUsuarios()
         {
             InitializeComponent();
-            dados = new BindingSource();
-            dtGridUsuarios.DataSource = dados;
+            dados = new DataTable();
+            foreach (var atributos in typeof(UsuariosEntidade).GetProperties())
+            {
+                dados.Columns.Add(atributos.Name);
+            }
         }
-        private void LimparDados()
+            private void LimparCampos()
         {
             txtLogin.Text = "";
             txtNome.Text = "";
@@ -38,10 +42,9 @@ namespace MapaSala.Formularios
             usuarios.Senha = txtSenha.Text;
             usuarios.Ativo = chkAtivo.Checked;
 
-            dados.Add(usuarios);
+            dados.Rows.Add(usuarios.Linha());
 
-            LimparDados();
-
+            LimparCampos();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -59,14 +62,38 @@ namespace MapaSala.Formularios
 
         }
 
-        private void dtGridUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
 
         private void bntLimpar_Click(object sender, EventArgs e)
         {
-            LimparDados();
+            LimparCampos();
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            dtGridUsuarios.Rows.RemoveAt(LinhaSelecionada);
+        }
+
+        private void dtGridUsuarios_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LinhaSelecionada = e.RowIndex;
+            numId.Value = Convert.ToInt32(dtGridUsuarios.Rows[LinhaSelecionada].Cells[0].Value);
+            txtNome.Text = dtGridUsuarios.Rows[LinhaSelecionada].Cells[1].Value.ToString();
+            txtLogin.Text = dtGridUsuarios.Rows[LinhaSelecionada].Cells[2].Value.ToString();
+            txtSenha.Text = dtGridUsuarios.Rows[LinhaSelecionada].Cells[3].Value.ToString();
+            chkAtivo.Checked = Convert.ToBoolean(dtGridUsuarios.Rows[LinhaSelecionada].Cells[4].Value);
+
+        }
+
+        private void tbnEditar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow editar = dtGridUsuarios.Rows[LinhaSelecionada];
+            editar.Cells[0].Value = numId.Value;
+            editar.Cells[1].Value = txtNome.Text;
+            editar.Cells[2].Value = txtLogin.Text;
+            editar.Cells[3].Value = txtSenha.Text;
+            editar.Cells[4].Value = chkAtivo.Checked;
+        }
+
     }
 }
