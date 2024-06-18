@@ -1,9 +1,7 @@
 ﻿using Model.Entidades;
 using System;
-
+using System.Data;
 using System.Windows.Forms;
-
-
 namespace MapaSala.Formularios
 {
     public partial class frmCursos : Form
@@ -13,8 +11,9 @@ namespace MapaSala.Formularios
         int LinhaSelecionada;
         public frmCursos()
         {
+            InitializeComponent();
             dados = new DataTable();
-            foreach (var atributos in typeof(Entidades).GetProperties())
+            foreach (var atributos in typeof(CursoEntidades).GetProperties())
             {
                 dados.Columns.Add(atributos.Name);
             }
@@ -38,16 +37,10 @@ namespace MapaSala.Formularios
             curso.Ativo = chkAtivo.Checked;
             curso.Nome = txtNome.Text;
 
-            dados.Add(curso);
+            dados.Rows.Add(curso.Linha());
 
             LimparCampos();
         }
-
-        private void dtGridCursos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void chkAtivo_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -60,7 +53,10 @@ namespace MapaSala.Formularios
 
         private void dtGridCursos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            LinhaSelecionada = e.RowIndex;
+            txtNome.Text = dtGridCursos.Rows[LinhaSelecionada].Cells[1].Value.ToString();
+            txtSigla.Text = dtGridDisciplinas.Rows[LinhaSelecionada].Cells[2].Value.ToString();
+            numId.Value = Convert.ToInt32(dtGridDisciplinas.Rows[LinhaSelecionada].Cells[0].Value);
         }
     }
 }

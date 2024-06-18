@@ -156,6 +156,7 @@ namespace MapaSala.Formularios
             this.bntLimpar.TabIndex = 25;
             this.bntLimpar.Text = "Limpar";
             this.bntLimpar.UseVisualStyleBackColor = true;
+            this.bntLimpar.Click += new System.EventHandler(this.bntLimpar_Click);
             // 
             // numId
             // 

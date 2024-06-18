@@ -82,5 +82,10 @@ namespace MapaSala.Formularios
         {
 
         }
+
+        private void bntLimpar_Click(object sender, EventArgs e)
+        {
+            LimparCampos();
+        }
     }
 }
