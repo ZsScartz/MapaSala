@@ -13,13 +13,18 @@ namespace MapaSala.Formularios
 {
     public partial class frmProfessores : Form
     {
-        BindingSource dados;
+        DataTable dados;
+        int LinhaSelecionada;
         public frmProfessores()
-            
-           
         {
             InitializeComponent();
-            dados = new BindingSource();
+            dados = new DataTable();
+            foreach (var atributos in typeof(ProfessoresEntidades).GetProperties())
+            {
+                dados.Columns.Add(atributos.Name);
+            }
+
+            
             dtGridProfessores.DataSource = dados;
         }
         private void limparCampos()
@@ -42,11 +47,10 @@ namespace MapaSala.Formularios
         {
             ProfessoresEntidades professores = new  ProfessoresEntidades();
             professores.Id = Convert.ToInt32(numId.Value);
-
             professores.Nome = txtNome.Text;
             professores.Apelido = txtApelido.Text;
 
-            dados.Add(professores);
+            dados.Rows.Add(professores.Linha());
 
             limparCampos();
         }
@@ -56,10 +60,7 @@ namespace MapaSala.Formularios
 
         }
 
-        private void dtGridProfessores_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
-        }
         private void bntLimpar_Click(object sender, EventArgs e)
         {
             limparCampos();
@@ -79,6 +80,30 @@ namespace MapaSala.Formularios
         {
             
         }
+
+        private void tbnEditar_Click(object sender, EventArgs e)
+        {
+            {
+                DataGridViewRow editar = dtGridProfessores.Rows[LinhaSelecionada];
+                editar.Cells[0].Value = numId.Value;
+                editar.Cells[1].Value = txtNome.Text;
+                editar.Cells[2].Value = txtApelido.Text;
+
+            }
+        }
+
+        private void dtGridProfessores_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LinhaSelecionada = e.RowIndex;
+            txtNome.Text = dtGridProfessores.Rows[LinhaSelecionada].Cells[1].Value.ToString();
+            txtApelido.Text = dtGridProfessores.Rows[LinhaSelecionada].Cells[2].Value.ToString();
+            numId.Value = Convert.ToInt32(dtGridProfessores.Rows[LinhaSelecionada].Cells[0].Value);
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            dtGridProfessores.Rows.RemoveAt(LinhaSelecionada);
+        }
     }
-}
+    }
 

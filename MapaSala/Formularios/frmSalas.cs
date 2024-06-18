@@ -36,11 +36,6 @@ namespace MapaSala.Formularios
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -84,6 +79,14 @@ namespace MapaSala.Formularios
         private void numId_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtGridSalas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            LinhaSelecionada = e.RowIndex;
+            txtNome.Text = dtGridProfessores.Rows[LinhaSelecionada].Cells[1].Value.ToString();
+            txtApelido.Text = dtGridProfessores.Rows[LinhaSelecionada].Cells[2].Value.ToString();
+            numId.Value = Convert.ToInt32(dtGridProfessores.Rows[LinhaSelecionada].Cells[0].Value);
         }
     }
 }

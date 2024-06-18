@@ -132,12 +132,16 @@ namespace MapaSala.Formularios
 
         }
 
-        private void dtGridDisciplinas_CellClick_1(object sender, DataGridViewCellEventArgs e)
+
+
+        private void dtGridDisciplinas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             LinhaSelecionada = e.RowIndex;
             txtNome.Text = dtGridDisciplinas.Rows[LinhaSelecionada].Cells[1].Value.ToString();
             txtSigla.Text = dtGridDisciplinas.Rows[LinhaSelecionada].Cells[2].Value.ToString();
             numId.Value = Convert.ToInt32(dtGridDisciplinas.Rows[LinhaSelecionada].Cells[0].Value);
         }
+
+   
     }
 }

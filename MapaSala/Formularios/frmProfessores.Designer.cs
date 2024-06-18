@@ -38,6 +38,8 @@ namespace MapaSala.Formularios
             this.dtGridProfessores = new System.Windows.Forms.DataGridView();
             this.numId = new System.Windows.Forms.NumericUpDown();
             this.bntLimpar = new System.Windows.Forms.Button();
+            this.tbnEditar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridProfessores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             this.SuspendLayout();
@@ -104,7 +106,7 @@ namespace MapaSala.Formularios
             this.dtGridProfessores.Name = "dtGridProfessores";
             this.dtGridProfessores.Size = new System.Drawing.Size(776, 363);
             this.dtGridProfessores.TabIndex = 7;
-            this.dtGridProfessores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridProfessores_CellContentClick);
+            this.dtGridProfessores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridProfessores_CellClick);
             // 
             // numId
             // 
@@ -124,11 +126,33 @@ namespace MapaSala.Formularios
             this.bntLimpar.UseVisualStyleBackColor = true;
             this.bntLimpar.Click += new System.EventHandler(this.bntLimpar_Click);
             // 
+            // tbnEditar
+            // 
+            this.tbnEditar.Location = new System.Drawing.Point(602, 47);
+            this.tbnEditar.Name = "tbnEditar";
+            this.tbnEditar.Size = new System.Drawing.Size(75, 23);
+            this.tbnEditar.TabIndex = 10;
+            this.tbnEditar.Text = "Editar";
+            this.tbnEditar.UseVisualStyleBackColor = true;
+            this.tbnEditar.Click += new System.EventHandler(this.tbnEditar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(531, 46);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(75, 23);
+            this.btnExcluir.TabIndex = 26;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // frmProfessores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.tbnEditar);
             this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.numId);
             this.Controls.Add(this.dtGridProfessores);
@@ -160,5 +184,7 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.DataGridView dtGridProfessores;
         private System.Windows.Forms.NumericUpDown numId;
         private System.Windows.Forms.Button bntLimpar;
+        private System.Windows.Forms.Button tbnEditar;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }
