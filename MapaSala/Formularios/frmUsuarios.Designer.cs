@@ -38,13 +38,13 @@ namespace MapaSala.Formularios
             this.label3 = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.dtGridUsuarios = new System.Windows.Forms.DataGridView();
             this.numId = new System.Windows.Forms.NumericUpDown();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.tbnEditar = new System.Windows.Forms.Button();
             this.bntLimpar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dtGridUsuarios)).BeginInit();
+            this.dtGridUsuarios = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -125,16 +125,6 @@ namespace MapaSala.Formularios
             this.label4.TabIndex = 9;
             this.label4.Text = "Senha";
             // 
-            // dtGridUsuarios
-            // 
-            this.dtGridUsuarios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dtGridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtGridUsuarios.Location = new System.Drawing.Point(12, 109);
-            this.dtGridUsuarios.Name = "dtGridUsuarios";
-            this.dtGridUsuarios.Size = new System.Drawing.Size(776, 329);
-            this.dtGridUsuarios.TabIndex = 10;
-            this.dtGridUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridUsuarios_CellClick);
-            // 
             // numId
             // 
             this.numId.Location = new System.Drawing.Point(22, 79);
@@ -172,16 +162,25 @@ namespace MapaSala.Formularios
             this.bntLimpar.UseVisualStyleBackColor = true;
             this.bntLimpar.Click += new System.EventHandler(this.bntLimpar_Click);
             // 
+            // dtGridUsuarios
+            // 
+            this.dtGridUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtGridUsuarios.Location = new System.Drawing.Point(22, 139);
+            this.dtGridUsuarios.Name = "dtGridUsuarios";
+            this.dtGridUsuarios.Size = new System.Drawing.Size(750, 299);
+            this.dtGridUsuarios.TabIndex = 30;
+            this.dtGridUsuarios.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridUsuarios_CellClick);
+            // 
             // frmUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dtGridUsuarios);
             this.Controls.Add(this.bntLimpar);
             this.Controls.Add(this.tbnEditar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.numId);
-            this.Controls.Add(this.dtGridUsuarios);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtSenha);
             this.Controls.Add(this.label3);
@@ -194,8 +193,8 @@ namespace MapaSala.Formularios
             this.Name = "frmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUsuarios";
-            ((System.ComponentModel.ISupportInitialize)(this.dtGridUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtGridUsuarios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,10 +211,10 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dtGridUsuarios;
         private System.Windows.Forms.NumericUpDown numId;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button tbnEditar;
         private System.Windows.Forms.Button bntLimpar;
+        private System.Windows.Forms.DataGridView dtGridUsuarios;
     }
 }

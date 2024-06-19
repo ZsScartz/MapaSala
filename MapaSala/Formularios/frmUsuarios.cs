@@ -17,6 +17,7 @@ namespace MapaSala.Formularios
             {
                 dados.Columns.Add(atributos.Name);
             }
+            dtGridUsuarios.DataSource = dados;
         }
             private void LimparCampos()
         {
@@ -60,8 +61,7 @@ namespace MapaSala.Formularios
             txtSenha.Text = dtGridUsuarios.Rows[LinhaSelecionada].Cells[2].Value.ToString();
             txtNome.Text = dtGridUsuarios.Rows[LinhaSelecionada].Cells[3].Value.ToString();
             chkAtivo.Checked = Convert.ToBoolean(dtGridUsuarios.Rows[LinhaSelecionada].Cells[4].Value);
-
-
+            
         }
 
         private void tbnEditar_Click(object sender, EventArgs e)
@@ -74,5 +74,6 @@ namespace MapaSala.Formularios
             editar.Cells[4].Value = chkAtivo.Checked;
         }
 
+       
     }
 }
