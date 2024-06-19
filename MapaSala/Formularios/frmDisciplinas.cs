@@ -1,12 +1,6 @@
 ﻿using Model.Entidades;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MapaSala.Formularios
@@ -40,45 +34,6 @@ namespace MapaSala.Formularios
             txtNome.Text = "";
             chkAtivo.Checked = false;
         }
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chkAtivo_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtNome_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtSigla_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtId_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmDisciplinas_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
@@ -92,21 +47,6 @@ namespace MapaSala.Formularios
 
             LimparCampos();
           
-        }
-
-        private void chkAtivo_CheckedChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void chkAtivo_CheckedChanged_2(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtId_TextChanged_1(object sender, EventArgs e)
-        {
-
         }
 
         private void bntLimpar_Click(object sender, EventArgs e)
@@ -124,15 +64,17 @@ namespace MapaSala.Formularios
             editar.Cells[0].Value = numId.Value;
             editar.Cells[1].Value = txtNome.Text;
             editar.Cells[2].Value = txtSigla.Text;
+            editar.Cells[3].Value = chkAtivo.Checked;
 
         }
 
         private void dtGridDisciplinas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             LinhaSelecionada = e.RowIndex;
+            numId.Value = Convert.ToInt32(dtGridDisciplinas.Rows[LinhaSelecionada].Cells[0].Value);
             txtNome.Text = dtGridDisciplinas.Rows[LinhaSelecionada].Cells[1].Value.ToString();
             txtSigla.Text = dtGridDisciplinas.Rows[LinhaSelecionada].Cells[2].Value.ToString();
-            numId.Value = Convert.ToInt32(dtGridDisciplinas.Rows[LinhaSelecionada].Cells[0].Value);
+            chkAtivo.Checked = Convert.ToBoolean(dtGridDisciplinas.Rows[LinhaSelecionada].Cells[3].Value);
         }
 
    

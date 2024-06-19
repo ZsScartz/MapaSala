@@ -1,12 +1,6 @@
 ﻿using Model.Entidades;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace MapaSala.Formularios
@@ -30,8 +24,8 @@ namespace MapaSala.Formularios
         {
             numId.Value = 0;
             TxtNomeSala.Text = "";
-            numCadeiras.Value = 0;
             NumComputadores.Value = 0;
+            numCadeiras.Value = 0;
             chkDisponivel.Checked = false;
             chkIsLab.Checked = false;
         }
@@ -42,10 +36,10 @@ namespace MapaSala.Formularios
             SalasEntidades sala = new SalasEntidades();
             sala.Id = Convert.ToInt32(numId.Value);
             sala.Nome = TxtNomeSala.Text;
-            sala.IsLab = chkIsLab.Checked;
-            sala.NumCadeiras = Convert.ToInt32(numCadeiras.Value);
             sala.NumComputadores = Convert.ToInt32(NumComputadores.Value);
+            sala.NumCadeiras = Convert.ToInt32(numCadeiras.Value);        
             sala.Disponivel = chkDisponivel.Checked;
+            sala.IsLab = chkIsLab.Checked;
 
             dados.Rows.Add(sala.Linha());
 
@@ -61,6 +55,7 @@ namespace MapaSala.Formularios
             NumComputadores.Value = Convert.ToInt32(dtGridSalas.Rows[LinhaSelecionada].Cells[2].Value);
             numCadeiras.Value = Convert.ToInt32(dtGridSalas.Rows[LinhaSelecionada].Cells[3].Value);
             chkDisponivel.Checked = Convert.ToBoolean(dtGridSalas.Rows[LinhaSelecionada].Cells[4].Value);
+            chkIsLab.Checked = Convert.ToBoolean(dtGridSalas.Rows[LinhaSelecionada].Cells[5].Value);
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
@@ -71,16 +66,12 @@ namespace MapaSala.Formularios
             editar.Cells[2].Value = NumComputadores.Value;
             editar.Cells[3].Value = numCadeiras.Value;
             editar.Cells[4].Value = chkDisponivel.Checked;
+            editar.Cells[5].Value = chkIsLab.Checked;
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
             dtGridSalas.Rows.RemoveAt(LinhaSelecionada);
-        }
-
-        private void chkDisponivel_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void bntLimpar_Click(object sender, EventArgs e)

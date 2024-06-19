@@ -52,7 +52,6 @@ namespace MapaSala.Formularios
             this.label1.Size = new System.Drawing.Size(16, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Id";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -69,7 +68,6 @@ namespace MapaSala.Formularios
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(100, 20);
             this.txtNome.TabIndex = 3;
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // txtApelido
             // 
@@ -77,7 +75,6 @@ namespace MapaSala.Formularios
             this.txtApelido.Name = "txtApelido";
             this.txtApelido.Size = new System.Drawing.Size(100, 20);
             this.txtApelido.TabIndex = 4;
-            this.txtApelido.TextChanged += new System.EventHandler(this.txtApelido_TextChanged);
             // 
             // label3
             // 
@@ -104,7 +101,7 @@ namespace MapaSala.Formularios
             this.dtGridProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridProfessores.Location = new System.Drawing.Point(12, 75);
             this.dtGridProfessores.Name = "dtGridProfessores";
-            this.dtGridProfessores.Size = new System.Drawing.Size(776, 363);
+            this.dtGridProfessores.Size = new System.Drawing.Size(675, 363);
             this.dtGridProfessores.TabIndex = 7;
             this.dtGridProfessores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridProfessores_CellClick);
             // 
@@ -114,7 +111,6 @@ namespace MapaSala.Formularios
             this.numId.Name = "numId";
             this.numId.Size = new System.Drawing.Size(31, 20);
             this.numId.TabIndex = 8;
-            this.numId.ValueChanged += new System.EventHandler(this.numId_ValueChanged);
             // 
             // bntLimpar
             // 
@@ -128,7 +124,7 @@ namespace MapaSala.Formularios
             // 
             // tbnEditar
             // 
-            this.tbnEditar.Location = new System.Drawing.Point(602, 47);
+            this.tbnEditar.Location = new System.Drawing.Point(612, 46);
             this.tbnEditar.Name = "tbnEditar";
             this.tbnEditar.Size = new System.Drawing.Size(75, 23);
             this.tbnEditar.TabIndex = 10;
@@ -150,7 +146,7 @@ namespace MapaSala.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(697, 450);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.tbnEditar);
             this.Controls.Add(this.bntLimpar);
@@ -165,7 +161,6 @@ namespace MapaSala.Formularios
             this.Name = "frmProfessores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmProfessores";
-            this.Load += new System.EventHandler(this.frmProfessores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridProfessores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).EndInit();
             this.ResumeLayout(false);

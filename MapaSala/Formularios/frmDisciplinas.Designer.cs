@@ -102,7 +102,7 @@ namespace MapaSala.Formularios
             this.dtGridDisciplinas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridDisciplinas.Location = new System.Drawing.Point(12, 132);
             this.dtGridDisciplinas.Name = "dtGridDisciplinas";
-            this.dtGridDisciplinas.Size = new System.Drawing.Size(776, 306);
+            this.dtGridDisciplinas.Size = new System.Drawing.Size(686, 306);
             this.dtGridDisciplinas.TabIndex = 21;
             this.dtGridDisciplinas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplinas_CellClick);
             // 
@@ -115,7 +115,6 @@ namespace MapaSala.Formularios
             this.chkAtivo.TabIndex = 22;
             this.chkAtivo.Text = "Ativo";
             this.chkAtivo.UseVisualStyleBackColor = true;
-            this.chkAtivo.CheckedChanged += new System.EventHandler(this.chkAtivo_CheckedChanged_2);
             // 
             // numId
             // 
@@ -158,7 +157,7 @@ namespace MapaSala.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(708, 450);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.bntLimpar);
@@ -174,7 +173,6 @@ namespace MapaSala.Formularios
             this.Name = "frmDisciplinas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDisciplinas";
-            this.Load += new System.EventHandler(this.frmDisciplinas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplinas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).EndInit();
             this.ResumeLayout(false);

@@ -24,11 +24,8 @@ namespace MapaSala.Formularios
             txtNome.Text = "";
             numId.Value = 0;
             txtSigla.Text = "";
+            txtTurno.Text = "";
             chkAtivo.Checked = false;
-        }
-        private void frmCursos_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
@@ -37,17 +34,13 @@ namespace MapaSala.Formularios
             curso.Id = Convert.ToInt32(numId.Value);
             curso.Nome = txtNome.Text;
             curso.Sigla = txtSigla.Text;
+            curso.Turno = txtTurno.Text;
             curso.Ativo = chkAtivo.Checked;
 
             dados.Rows.Add(curso.Linha());
 
             LimparCampos();
         }
-        private void chkAtivo_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void bntLimpar_Click(object sender, EventArgs e)
         {
             LimparCampos();
@@ -59,7 +52,8 @@ namespace MapaSala.Formularios
             numId.Value = Convert.ToInt32(dtGridCursos.Rows[LinhaSelecionada].Cells[0].Value);
             txtNome.Text = dtGridCursos.Rows[LinhaSelecionada].Cells[1].Value.ToString();
             txtSigla.Text = dtGridCursos.Rows[LinhaSelecionada].Cells[2].Value.ToString();
-            chkAtivo.Checked = Convert.ToBoolean(dtGridCursos.Rows[LinhaSelecionada].Cells[3].Value);
+            txtTurno.Text = dtGridCursos.Rows[LinhaSelecionada].Cells[3].Value.ToString();
+            chkAtivo.Checked = Convert.ToBoolean(dtGridCursos.Rows[LinhaSelecionada].Cells[4].Value);
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -73,7 +67,9 @@ namespace MapaSala.Formularios
             editar.Cells[0].Value = numId.Value;
             editar.Cells[1].Value = txtNome.Text;
             editar.Cells[2].Value = txtSigla.Text;
-            editar.Cells[3].Value = chkAtivo.Checked;
+            editar.Cells[3].Value = txtTurno.Text;
+            editar.Cells[4].Value = chkAtivo.Checked;
+
         }
     }
 }

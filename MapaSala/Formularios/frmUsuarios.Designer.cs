@@ -62,7 +62,6 @@ namespace MapaSala.Formularios
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(75, 20);
             this.txtNome.TabIndex = 2;
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // label2
             // 
@@ -108,7 +107,6 @@ namespace MapaSala.Formularios
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 7;
             this.label3.Text = "Login";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtSenha
             // 
@@ -146,7 +144,7 @@ namespace MapaSala.Formularios
             // 
             // btnExcluir
             // 
-            this.btnExcluir.Location = new System.Drawing.Point(628, 78);
+            this.btnExcluir.Location = new System.Drawing.Point(628, 80);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 23);
             this.btnExcluir.TabIndex = 27;
@@ -196,7 +194,6 @@ namespace MapaSala.Formularios
             this.Name = "frmUsuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmUsuarios";
-            this.Load += new System.EventHandler(this.frmUsuarios_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtGridUsuarios)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).EndInit();
             this.ResumeLayout(false);
