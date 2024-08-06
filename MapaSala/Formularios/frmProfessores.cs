@@ -9,6 +9,7 @@ namespace MapaSala.Formularios
     public partial class frmProfessores : Form
     {
         DataTable dados;
+        ProfessorDAO dao = new ProfessorDAO();
         int LinhaSelecionada;
         public frmProfessores()
         {
@@ -18,8 +19,8 @@ namespace MapaSala.Formularios
             {
                 dados.Columns.Add(atributos.Name);
             }
+            dados = dao.ObterProfessores();
 
-            
             dtGridProfessores.DataSource = dados;
         }
         private void limparCampos()
@@ -39,7 +40,7 @@ namespace MapaSala.Formularios
             ProfessorDAO dao = new ProfessorDAO();
             dao.Inserir(professores);
 
-            dados.Rows.Add(professores.Linha());
+            dtGridProfessores.DataSource = dao.ObterProfessores();
 
             limparCampos();
         }
