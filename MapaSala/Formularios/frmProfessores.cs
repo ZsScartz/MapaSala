@@ -2,6 +2,7 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
+using MapaSala.DAO;
 
 namespace MapaSala.Formularios
 {
@@ -34,6 +35,9 @@ namespace MapaSala.Formularios
             professores.Id = Convert.ToInt32(numId.Value);
             professores.Nome = txtNome.Text;
             professores.Apelido = txtApelido.Text;
+
+            ProfessorDAO dao = new ProfessorDAO();
+            dao.Inserir(professores);
 
             dados.Rows.Add(professores.Linha());
 
