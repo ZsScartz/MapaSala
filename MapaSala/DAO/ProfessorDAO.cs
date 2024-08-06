@@ -1,10 +1,6 @@
 ﻿using System;
 using Model.Entidades;
-using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data;
 
 namespace MapaSala.DAO
@@ -34,7 +30,7 @@ namespace MapaSala.DAO
 
             DataTable dt = new DataTable();
             Conexao.Open();
-            string query = "SELECT * from Professores";
+            string query = "SELECT id, Nome, Apelido FROM Professores order by Id desc";
             SqlCommand comando = new SqlCommand(query, Conexao);
 
             SqlDataReader Leitura = comando.ExecuteReader();
