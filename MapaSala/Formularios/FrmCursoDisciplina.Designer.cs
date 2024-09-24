@@ -37,8 +37,6 @@ namespace MapaSala.Formularios
             this.cbPeriodo = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.cbDisciplina = new System.Windows.Forms.ComboBox();
-            this.txtPesquisar = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtCursoDisciplina)).BeginInit();
             this.SuspendLayout();
             // 
@@ -131,30 +129,11 @@ namespace MapaSala.Formularios
             this.cbDisciplina.Size = new System.Drawing.Size(121, 21);
             this.cbDisciplina.TabIndex = 8;
             // 
-            // txtPesquisar
-            // 
-            this.txtPesquisar.Location = new System.Drawing.Point(198, 171);
-            this.txtPesquisar.Name = "txtPesquisar";
-            this.txtPesquisar.Size = new System.Drawing.Size(100, 20);
-            this.txtPesquisar.TabIndex = 9;
-            this.txtPesquisar.TextChanged += new System.EventHandler(this.txtPesquisar_TextChanged);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(195, 155);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 10;
-            this.label2.Text = "Pesquisar";
-            // 
             // FrmCursoDisciplina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.cbDisciplina);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbPeriodo);
@@ -181,7 +160,5 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.ComboBox cbPeriodo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbDisciplina;
-        private System.Windows.Forms.TextBox txtPesquisar;
-        private System.Windows.Forms.Label label2;
     }
 }

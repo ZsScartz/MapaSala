@@ -87,42 +87,5 @@ namespace MapaSala.DAO
             Conexao.Close();
             return dt;
         }
-        public DataTable Pesquisar(string pesquisa)
-        {
-            DataTable dt = new DataTable();
-            Conexao.Open();
-            if (string.IsNullOrEmpty(pesquisa))
-            {
-                query = "SELECT Id FROM Curso_Disciplina order by Id desc";
-            }
-            else
-            {
-                query = "SELECT Id FROM Curso_Disciplina WHERE Id LIKE '%" + pesquisa + "%' ORDER BY Id DESC";
-
-            }
-            SqlCommand comando = new SqlCommand(query, Conexao);
-
-            SqlDataReader Leitura = comando.ExecuteReader();
-            foreach (var atributos in typeof(CursoDisciplinaEntidade).GetProperties())
-            {
-                dt.Columns.Add(atributos.Name);
-            }
-            if (Leitura.HasRows)
-            {
-                while (Leitura.Read())
-                {
-                    CursoDisciplinaEntidade p = new CursoDisciplinaEntidade();
-                    p.Id = Convert.ToInt32(Leitura[0]);
-                    p.DisciplinaID = Convert.ToInt32(Leitura[1]);
-                    p.CursoId = Convert.ToInt32(Leitura[2]);
-
-
-                    dt.Rows.Add(p.Linha());
-                }
-            }
-            Conexao.Close();
-            return dt;
-        }
-
     }
 }
