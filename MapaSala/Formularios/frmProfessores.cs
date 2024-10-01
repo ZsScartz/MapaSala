@@ -69,12 +69,6 @@ namespace MapaSala.Formularios
         {
             dtGridProfessores.Rows.RemoveAt(LinhaSelecionada);
         }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bntLimpar_Click(object sender, EventArgs e)
         {
             limparCampos();
@@ -83,11 +77,6 @@ namespace MapaSala.Formularios
         private void txtPesquisar_TextChanged(object sender, EventArgs e)
         {
             dtGridProfessores.DataSource = dao.Pesquisar(txtPesquisar.Text);
-        }
-
-        private void frmProfessores_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void dtGridProfessores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

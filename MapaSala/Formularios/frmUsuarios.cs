@@ -74,9 +74,5 @@ namespace MapaSala.Formularios
             editar.Cells[4].Value = chkAtivo.Checked;
         }
 
-        private void txtSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

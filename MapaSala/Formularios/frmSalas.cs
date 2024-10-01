@@ -87,15 +87,11 @@ namespace MapaSala.Formularios
             dtGridSalas.DataSource = dao.Pesquisar(txtPesquisar.Text);
         }
 
-        private void dtGridSalas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void dtGridSalas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             frmEditarSalas editar = new frmEditarSalas();
             editar.ShowDialog();
         }
+
     }
 }
