@@ -12,9 +12,10 @@ namespace Model.Entidades
         public long DisciplinaID { get; set; }
         public long CursoId { get; set; }
         public string Periodo { get; set; }
-
+        public string NomeDisciplina { get; set; }
+        public string NomeCurso { get; set; }
         public object[] Linha()
         {
-            return new object[] { Id, DisciplinaID,CursoId };        }
+            return new object[] { Id, DisciplinaID,CursoId, NomeDisciplina, NomeCurso};        }
     }
 }

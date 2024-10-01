@@ -121,6 +121,7 @@ namespace MapaSala.Formularios
             this.dtGridCursos.TabIndex = 12;
             this.dtGridCursos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridCursos_CellClick);
             this.dtGridCursos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridCursos_CellContentClick);
+            this.dtGridCursos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridCursos_CellDoubleClick);
             // 
             // numId
             // 

@@ -3,6 +3,8 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 using MapaSala.DAO;
+using MapaSala.Formularios.Editar;
+
 namespace MapaSala.Formularios
 {
     public partial class frmDisciplinas : Form
@@ -86,6 +88,17 @@ namespace MapaSala.Formularios
         }
 
         private void frmDisciplinas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dtGridDisciplinas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmEditarDisciplina editar = new frmEditarDisciplina();
+            editar.ShowDialog();
+        }
+
+        private void dtGridDisciplinas_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

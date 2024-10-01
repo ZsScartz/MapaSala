@@ -32,15 +32,6 @@ namespace MapaSala.Formularios
             AtualizaGrid(dao.ObterCursoDisciplina());
         }
 
-        private void cbxCursos_SelectedIndexChanged(object sender, EventArgs e)
-        {
-          
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
         private void btnAdicionar_Click(object sender, EventArgs e)
         {
             CursoDisciplinaDAO cursoDisciplinaDAO = new CursoDisciplinaDAO();
@@ -52,21 +43,5 @@ namespace MapaSala.Formularios
 
             AtualizaGrid(dao.ObterCursoDisciplina());
         }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-   
-        }
-
-        private void cbPeriodo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        
-        }
-
-        private void FrmCursoDisciplina_Load(object sender, EventArgs e)
-        {
-
-        }
-
     }
 }

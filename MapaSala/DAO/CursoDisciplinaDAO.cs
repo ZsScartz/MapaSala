@@ -78,8 +78,8 @@ namespace MapaSala.DAO
                 while (Leitura.Read())
                 {
                     CursoDisciplinaEntidade p = new CursoDisciplinaEntidade();
-                    p.CursoId = Convert.ToInt32(Leitura[0]);
-                    p.DisciplinaID = Convert.ToInt32(Leitura[1]);
+                    p.NomeCurso = Leitura[0].ToString();
+                    p.NomeDisciplina = Leitura[1].ToString();
                     p.Periodo = Leitura[2].ToString();
                     dt.Rows.Add(p.Linha());
                 }

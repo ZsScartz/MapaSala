@@ -52,7 +52,6 @@ namespace MapaSala.Formularios
             this.cbxCursos.Name = "cbxCursos";
             this.cbxCursos.Size = new System.Drawing.Size(121, 21);
             this.cbxCursos.TabIndex = 1;
-            this.cbxCursos.SelectedIndexChanged += new System.EventHandler(this.cbxCursos_SelectedIndexChanged);
             // 
             // dtCursoDisciplina
             // 
@@ -61,7 +60,6 @@ namespace MapaSala.Formularios
             this.dtCursoDisciplina.Name = "dtCursoDisciplina";
             this.dtCursoDisciplina.Size = new System.Drawing.Size(445, 402);
             this.dtCursoDisciplina.TabIndex = 2;
-            this.dtCursoDisciplina.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnAdicionar
             // 
@@ -105,7 +103,6 @@ namespace MapaSala.Formularios
             this.cbPeriodo.Name = "cbPeriodo";
             this.cbPeriodo.Size = new System.Drawing.Size(121, 21);
             this.cbPeriodo.TabIndex = 6;
-            this.cbPeriodo.SelectedIndexChanged += new System.EventHandler(this.cbPeriodo_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -115,7 +112,6 @@ namespace MapaSala.Formularios
             this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "Periodo";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // cbDisciplina
             // 
@@ -144,7 +140,6 @@ namespace MapaSala.Formularios
             this.Controls.Add(this.cbxCursos);
             this.Name = "FrmCursoDisciplina";
             this.Text = "FrmCursoDisciplina";
-            this.Load += new System.EventHandler(this.FrmCursoDisciplina_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtCursoDisciplina)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

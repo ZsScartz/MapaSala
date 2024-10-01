@@ -3,6 +3,7 @@ using System;
 using System.Data;
 using System.Windows.Forms;
 using MapaSala.DAO;
+using MapaSala.Formularios.Editar;
 
 namespace MapaSala.Formularios
 {
@@ -87,6 +88,12 @@ namespace MapaSala.Formularios
         private void frmProfessores_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtGridProfessores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmEditarProfessores editar = new frmEditarProfessores();
+            editar.ShowDialog();
         }
     }
     }

@@ -1,4 +1,5 @@
 ﻿using MapaSala.DAO;
+using MapaSala.Formularios.Editar;
 using Model.Entidades;
 using System;
 using System.Data;
@@ -86,6 +87,12 @@ namespace MapaSala.Formularios
         private void frmCursos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtGridCursos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmEditarCursos editar = new frmEditarCursos();
+            editar.ShowDialog();
         }
     }
 }

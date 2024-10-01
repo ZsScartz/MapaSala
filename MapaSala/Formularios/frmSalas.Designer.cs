@@ -149,6 +149,7 @@ namespace MapaSala.Formularios
             this.dtGridSalas.TabIndex = 16;
             this.dtGridSalas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridSalas_CellClick);
             this.dtGridSalas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridSalas_CellContentClick);
+            this.dtGridSalas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridSalas_CellDoubleClick);
             // 
             // bntLimpar
             // 

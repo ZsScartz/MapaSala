@@ -105,9 +105,10 @@ namespace MapaSala.Formularios
             this.dtGridProfessores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGridProfessores.Location = new System.Drawing.Point(12, 75);
             this.dtGridProfessores.Name = "dtGridProfessores";
-            this.dtGridProfessores.Size = new System.Drawing.Size(675, 363);
+            this.dtGridProfessores.Size = new System.Drawing.Size(781, 363);
             this.dtGridProfessores.TabIndex = 7;
             this.dtGridProfessores.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridProfessores_CellClick);
+            this.dtGridProfessores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridProfessores_CellDoubleClick);
             // 
             // numId
             // 
@@ -172,7 +173,7 @@ namespace MapaSala.Formularios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 450);
+            this.ClientSize = new System.Drawing.Size(813, 450);
             this.Controls.Add(this.pesquisar);
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.btnExcluir);

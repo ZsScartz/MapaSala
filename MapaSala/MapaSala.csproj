@@ -58,6 +58,30 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Editar\frmEditarCursos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Editar\frmEditarCursos.Designer.cs">
+      <DependentUpon>frmEditarCursos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Editar\frmEditarDisciplina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Editar\frmEditarDisciplina.Designer.cs">
+      <DependentUpon>frmEditarDisciplina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Editar\frmEditarProfessores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Editar\frmEditarProfessores.Designer.cs">
+      <DependentUpon>frmEditarProfessores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Editar\frmEditarSalas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Editar\frmEditarSalas.Designer.cs">
+      <DependentUpon>frmEditarSalas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FrmCursoDisciplina.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +128,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Editar\frmEditarCursos.resx">
+      <DependentUpon>frmEditarCursos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Editar\frmEditarDisciplina.resx">
+      <DependentUpon>frmEditarDisciplina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Editar\frmEditarProfessores.resx">
+      <DependentUpon>frmEditarProfessores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Editar\frmEditarSalas.resx">
+      <DependentUpon>frmEditarSalas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FrmCursoDisciplina.resx">
       <DependentUpon>FrmCursoDisciplina.cs</DependentUpon>
