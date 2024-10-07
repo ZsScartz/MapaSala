@@ -35,6 +35,7 @@ namespace MapaSala.Formularios.Editar
             this.txtSigla = new System.Windows.Forms.TextBox();
             this.chkAtivo = new System.Windows.Forms.CheckBox();
             this.btnSalvar = new System.Windows.Forms.Button();
+            this.label_id = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtNome
@@ -88,11 +89,21 @@ namespace MapaSala.Formularios.Editar
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
+            // label_id
+            // 
+            this.label_id.AutoSize = true;
+            this.label_id.Location = new System.Drawing.Point(7, 9);
+            this.label_id.Name = "label_id";
+            this.label_id.Size = new System.Drawing.Size(35, 13);
+            this.label_id.TabIndex = 25;
+            this.label_id.Text = "label1";
+            // 
             // frmEditarDisciplina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(185, 288);
+            this.Controls.Add(this.label_id);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.chkAtivo);
             this.Controls.Add(this.txtSigla);
@@ -101,6 +112,7 @@ namespace MapaSala.Formularios.Editar
             this.Controls.Add(this.txtNome);
             this.Name = "frmEditarDisciplina";
             this.Text = "frmEditarDisciplina";
+            this.Load += new System.EventHandler(this.frmEditarDisciplina_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,5 +126,6 @@ namespace MapaSala.Formularios.Editar
         private System.Windows.Forms.TextBox txtSigla;
         private System.Windows.Forms.CheckBox chkAtivo;
         private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Label label_id;
     }
 }
