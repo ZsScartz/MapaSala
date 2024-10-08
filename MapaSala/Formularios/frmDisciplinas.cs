@@ -102,5 +102,10 @@ namespace MapaSala.Formularios
         {
 
         }
+        private void Fechou_Editar_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+            dtGridDisciplinas.DataSource = dao.ObterDisciplinas();
+        }
     }
 }

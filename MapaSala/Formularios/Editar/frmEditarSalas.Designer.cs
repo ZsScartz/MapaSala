@@ -134,6 +134,7 @@ namespace MapaSala.Formularios.Editar
             this.Controls.Add(this.label1);
             this.Controls.Add(this.TxtNomeSala);
             this.Name = "frmEditarSalas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditarSalas";
             ((System.ComponentModel.ISupportInitialize)(this.NumComputadores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numCadeiras)).EndInit();

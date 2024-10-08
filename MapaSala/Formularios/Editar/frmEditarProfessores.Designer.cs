@@ -88,6 +88,7 @@ namespace MapaSala.Formularios.Editar
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnSalvar);
             this.Name = "frmEditarProfessores";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditarProfessores";
             this.ResumeLayout(false);
             this.PerformLayout();
