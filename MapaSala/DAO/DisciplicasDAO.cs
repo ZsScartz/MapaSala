@@ -64,7 +64,7 @@ namespace MapaSala.DAO
             using (SqlConnection conexao = new SqlConnection(LinhaConexao))
             {
                 conexao.Open();
-                string query = "SELECT Id, Nome, Sigla FROM Salas ORDER BY Id DESC";
+                string query = "SELECT Id, Nome, Sigla FROM Disciplinas ORDER BY Id DESC";
                 using (SqlCommand comando = new SqlCommand(query, conexao))
                 {
                     using (SqlDataReader leitura = comando.ExecuteReader())

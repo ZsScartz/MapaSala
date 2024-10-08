@@ -16,5 +16,10 @@ namespace MapaSala.Formularios.Editar
         {
             InitializeComponent();
         }
+
+        private void frmEditarCursos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

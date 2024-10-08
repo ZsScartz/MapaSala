@@ -102,6 +102,7 @@ namespace MapaSala.Formularios.Editar
             this.Name = "frmEditarCursos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmAditarCursos";
+            this.Load += new System.EventHandler(this.frmEditarCursos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

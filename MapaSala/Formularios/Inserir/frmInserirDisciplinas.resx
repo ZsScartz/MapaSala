@@ -117,29 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="carlinhos (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carlinhos (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Carloooos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Carloooos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="mylivewallpapers.com-Natsuki-Doki-Doki-Literature-Club" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mylivewallpapers.com-Natsuki-Doki-Doki-Literature-Club.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="carlos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carlos.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="carlinhos1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carlinhos1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1149234" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1149234.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="carlinhos" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\carlinhos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="nat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\nat.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
 </root>

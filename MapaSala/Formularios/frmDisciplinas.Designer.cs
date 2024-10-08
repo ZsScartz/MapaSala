@@ -43,6 +43,7 @@ namespace MapaSala.Formularios
             this.btnEditar = new System.Windows.Forms.Button();
             this.txtPesquisar = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.btnInserir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtGridDisciplinas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numId)).BeginInit();
             this.SuspendLayout();
@@ -107,7 +108,6 @@ namespace MapaSala.Formularios
             this.dtGridDisciplinas.Size = new System.Drawing.Size(686, 306);
             this.dtGridDisciplinas.TabIndex = 21;
             this.dtGridDisciplinas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplinas_CellClick);
-            this.dtGridDisciplinas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplinas_CellContentClick);
             this.dtGridDisciplinas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGridDisciplinas_CellDoubleClick);
             // 
             // chkAtivo
@@ -174,11 +174,21 @@ namespace MapaSala.Formularios
             this.label4.TabIndex = 28;
             this.label4.Text = "Pesquisar";
             // 
+            // btnInserir
+            // 
+            this.btnInserir.Location = new System.Drawing.Point(380, 44);
+            this.btnInserir.Name = "btnInserir";
+            this.btnInserir.Size = new System.Drawing.Size(75, 23);
+            this.btnInserir.TabIndex = 29;
+            this.btnInserir.Text = "Inserir";
+            this.btnInserir.UseVisualStyleBackColor = true;
+            // 
             // frmDisciplinas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 450);
+            this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtPesquisar);
             this.Controls.Add(this.btnEditar);
@@ -220,5 +230,6 @@ namespace MapaSala.Formularios
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.TextBox txtPesquisar;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button btnInserir;
     }
 }

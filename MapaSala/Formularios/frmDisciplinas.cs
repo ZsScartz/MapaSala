@@ -94,14 +94,22 @@ namespace MapaSala.Formularios
 
         private void dtGridDisciplinas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmEditarDisciplina editar = new frmEditarDisciplina();
-            editar.ShowDialog();
+            if (e.RowIndex >= 0)
+            {
+                int id = Convert.ToInt32(
+                    dtGridDisciplinas.Rows[e.RowIndex].Cells[0].Value);
+
+
+                frmEditarDisciplina editar = new frmEditarDisciplina(id);
+
+                // Inscreve-se no evento
+                editar.FormClosed += Fechou_Editar_FormClosed;
+
+                editar.ShowDialog(); // Abre o formulário como um diálogo modal
+            }
         }
 
-        private void dtGridDisciplinas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+     
         private void Fechou_Editar_FormClosed(object sender, FormClosedEventArgs e)
         {
 
