@@ -74,5 +74,9 @@ namespace MapaSala.Formularios
             editar.Cells[4].Value = chkAtivo.Checked;
         }
 
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
