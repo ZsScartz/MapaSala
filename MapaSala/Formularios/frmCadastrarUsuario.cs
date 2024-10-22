@@ -26,6 +26,7 @@ namespace MapaSala.Formularios
             u.Ativo = chkAtivo.Checked;
             u.inserir();
             MessageBox.Show("Sucesso", "Cadastrado com sucesso");
+            Close();
         }
     }
 }
